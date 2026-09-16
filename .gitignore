@@ -1,0 +1,13 @@
+# python
+__pycache__/
+*.pyc
+.venv/
+.pytest_cache/
+
+# runtime data (uploaded media, templates, edits, renders, exports)
+workspace/*
+!workspace/.gitkeep
+
+# misc
+*.log
+.DS_Store

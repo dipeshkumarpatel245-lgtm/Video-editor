@@ -1,0 +1,2712 @@
+{
+  "version": "0.1.0",
+  "meta": {
+    "duration": 21.0,
+    "fps": 30.0,
+    "resolution": [
+      720,
+      404
+    ],
+    "has_audio": true
+  },
+  "tempo": 120.3,
+  "beatmap": [
+    {
+      "t": 0.02,
+      "strength": 0.0238,
+      "energy": "normal"
+    },
+    {
+      "t": 0.4689,
+      "strength": 203.8316,
+      "energy": "normal"
+    },
+    {
+      "t": 0.9678,
+      "strength": 204.6711,
+      "energy": "normal"
+    },
+    {
+      "t": 1.4667,
+      "strength": 206.0169,
+      "energy": "normal"
+    },
+    {
+      "t": 1.9655,
+      "strength": 204.1821,
+      "energy": "normal"
+    },
+    {
+      "t": 2.4644,
+      "strength": 199.0053,
+      "energy": "normal"
+    },
+    {
+      "t": 2.9732,
+      "strength": 193.6482,
+      "energy": "normal"
+    },
+    {
+      "t": 3.4721,
+      "strength": 189.3638,
+      "energy": "normal"
+    },
+    {
+      "t": 3.971,
+      "strength": 194.4738,
+      "energy": "normal"
+    },
+    {
+      "t": 4.4698,
+      "strength": 201.0162,
+      "energy": "normal"
+    },
+    {
+      "t": 4.9687,
+      "strength": 204.7762,
+      "energy": "normal"
+    },
+    {
+      "t": 5.4676,
+      "strength": 207.1301,
+      "energy": "normal"
+    },
+    {
+      "t": 5.9664,
+      "strength": 206.742,
+      "energy": "normal"
+    },
+    {
+      "t": 6.4653,
+      "strength": 202.894,
+      "energy": "normal"
+    },
+    {
+      "t": 6.9642,
+      "strength": 197.7046,
+      "energy": "normal"
+    },
+    {
+      "t": 7.473,
+      "strength": 191.8314,
+      "energy": "normal"
+    },
+    {
+      "t": 7.9719,
+      "strength": 188.1656,
+      "energy": "normal"
+    },
+    {
+      "t": 8.4707,
+      "strength": 196.0721,
+      "energy": "normal"
+    },
+    {
+      "t": 8.9696,
+      "strength": 201.9177,
+      "energy": "normal"
+    },
+    {
+      "t": 9.4685,
+      "strength": 205.6681,
+      "energy": "normal"
+    },
+    {
+      "t": 9.9673,
+      "strength": 207.2532,
+      "energy": "normal"
+    },
+    {
+      "t": 10.4662,
+      "strength": 205.2569,
+      "energy": "normal"
+    },
+    {
+      "t": 10.9651,
+      "strength": 202.0999,
+      "energy": "normal"
+    },
+    {
+      "t": 11.4739,
+      "strength": 196.7476,
+      "energy": "normal"
+    },
+    {
+      "t": 11.9728,
+      "strength": 191.9403,
+      "energy": "normal"
+    },
+    {
+      "t": 12.4717,
+      "strength": 189.1452,
+      "energy": "normal"
+    },
+    {
+      "t": 12.9705,
+      "strength": 197.0755,
+      "energy": "normal"
+    },
+    {
+      "t": 13.4694,
+      "strength": 202.3787,
+      "energy": "normal"
+    },
+    {
+      "t": 13.9683,
+      "strength": 205.7164,
+      "energy": "normal"
+    },
+    {
+      "t": 14.4671,
+      "strength": 206.7879,
+      "energy": "normal"
+    },
+    {
+      "t": 14.966,
+      "strength": 205.2162,
+      "energy": "normal"
+    },
+    {
+      "t": 15.4649,
+      "strength": 200.8446,
+      "energy": "normal"
+    },
+    {
+      "t": 15.9737,
+      "strength": 194.6621,
+      "energy": "normal"
+    },
+    {
+      "t": 16.4726,
+      "strength": 190.509,
+      "energy": "normal"
+    },
+    {
+      "t": 16.9714,
+      "strength": 191.6543,
+      "energy": "normal"
+    },
+    {
+      "t": 17.4703,
+      "strength": 198.9697,
+      "energy": "normal"
+    },
+    {
+      "t": 17.9692,
+      "strength": 203.7053,
+      "energy": "normal"
+    },
+    {
+      "t": 18.468,
+      "strength": 206.5448,
+      "energy": "normal"
+    },
+    {
+      "t": 18.9669,
+      "strength": 206.8572,
+      "energy": "normal"
+    },
+    {
+      "t": 19.4658,
+      "strength": 204.1136,
+      "energy": "normal"
+    },
+    {
+      "t": 19.9646,
+      "strength": 200.1894,
+      "energy": "normal"
+    },
+    {
+      "t": 20.4735,
+      "strength": 194.8325,
+      "energy": "normal"
+    },
+    {
+      "t": 20.8327,
+      "strength": 0.0,
+      "energy": "normal"
+    }
+  ],
+  "loudness": {
+    "integrated_lufs": -24.8,
+    "lra": 6.4,
+    "curve": [
+      {
+        "t": 0.0,
+        "db": -24.05,
+        "label": "medium"
+      },
+      {
+        "t": 0.1,
+        "db": -180.0,
+        "label": "silence"
+      },
+      {
+        "t": 0.2,
+        "db": -180.0,
+        "label": "silence"
+      },
+      {
+        "t": 0.3,
+        "db": -180.0,
+        "label": "silence"
+      },
+      {
+        "t": 0.4,
+        "db": -71.93,
+        "label": "silence"
+      },
+      {
+        "t": 0.5,
+        "db": -24.02,
+        "label": "medium"
+      },
+      {
+        "t": 0.6,
+        "db": -180.0,
+        "label": "silence"
+      },
+      {
+        "t": 0.7,
+        "db": -180.0,
+        "label": "silence"
+      },
+      {
+        "t": 0.8,
+        "db": -180.0,
+        "label": "silence"
+      },
+      {
+        "t": 0.9,
+        "db": -64.08,
+        "label": "silence"
+      },
+      {
+        "t": 1.0,
+        "db": -24.0,
+        "label": "medium"
+      },
+      {
+        "t": 1.1,
+        "db": -180.0,
+        "label": "silence"
+      },
+      {
+        "t": 1.2,
+        "db": -180.0,
+        "label": "silence"
+      },
+      {
+        "t": 1.3,
+        "db": -180.0,
+        "label": "silence"
+      },
+      {
+        "t": 1.4,
+        "db": -73.79,
+        "label": "silence"
+      },
+      {
+        "t": 1.5,
+        "db": -24.02,
+        "label": "medium"
+      },
+      {
+        "t": 1.6,
+        "db": -180.0,
+        "label": "silence"
+      },
+      {
+        "t": 1.7,
+        "db": -180.0,
+        "label": "silence"
+      },
+      {
+        "t": 1.8,
+        "db": -180.0,
+        "label": "silence"
+      },
+      {
+        "t": 1.9,
+        "db": -79.45,
+        "label": "silence"
+      },
+      {
+        "t": 2.0,
+        "db": -24.0,
+        "label": "medium"
+      },
+      {
+        "t": 2.1,
+        "db": -180.0,
+        "label": "silence"
+      },
+      {
+        "t": 2.2,
+        "db": -180.0,
+        "label": "silence"
+      },
+      {
+        "t": 2.3,
+        "db": -180.0,
+        "label": "silence"
+      },
+      {
+        "t": 2.4,
+        "db": -72.19,
+        "label": "silence"
+      },
+      {
+        "t": 2.5,
+        "db": -24.0,
+        "label": "medium"
+      },
+      {
+        "t": 2.6,
+        "db": -180.0,
+        "label": "silence"
+      },
+      {
+        "t": 2.7,
+        "db": -180.0,
+        "label": "silence"
+      },
+      {
+        "t": 2.8,
+        "db": -180.0,
+        "label": "silence"
+      },
+      {
+        "t": 2.9,
+        "db": -71.07,
+        "label": "silence"
+      },
+      {
+        "t": 3.0,
+        "db": -24.01,
+        "label": "medium"
+      },
+      {
+        "t": 3.1,
+        "db": -180.0,
+        "label": "silence"
+      },
+      {
+        "t": 3.2,
+        "db": -180.0,
+        "label": "silence"
+      },
+      {
+        "t": 3.3,
+        "db": -180.0,
+        "label": "silence"
+      },
+      {
+        "t": 3.4,
+        "db": -77.79,
+        "label": "silence"
+      },
+      {
+        "t": 3.5,
+        "db": -23.99,
+        "label": "medium"
+      },
+      {
+        "t": 3.6,
+        "db": -180.0,
+        "label": "silence"
+      },
+      {
+        "t": 3.7,
+        "db": -180.0,
+        "label": "silence"
+      },
+      {
+        "t": 3.8,
+        "db": -180.0,
+        "label": "silence"
+      },
+      {
+        "t": 3.9,
+        "db": -70.18,
+        "label": "silence"
+      },
+      {
+        "t": 4.0,
+        "db": -24.0,
+        "label": "medium"
+      },
+      {
+        "t": 4.1,
+        "db": -180.0,
+        "label": "silence"
+      },
+      {
+        "t": 4.2,
+        "db": -180.0,
+        "label": "silence"
+      },
+      {
+        "t": 4.3,
+        "db": -180.0,
+        "label": "silence"
+      },
+      {
+        "t": 4.4,
+        "db": -72.9,
+        "label": "silence"
+      },
+      {
+        "t": 4.5,
+        "db": -24.0,
+        "label": "medium"
+      },
+      {
+        "t": 4.6,
+        "db": -180.0,
+        "label": "silence"
+      },
+      {
+        "t": 4.7,
+        "db": -180.0,
+        "label": "silence"
+      },
+      {
+        "t": 4.8,
+        "db": -180.0,
+        "label": "silence"
+      },
+      {
+        "t": 4.9,
+        "db": -75.17,
+        "label": "silence"
+      },
+      {
+        "t": 5.0,
+        "db": -24.01,
+        "label": "medium"
+      },
+      {
+        "t": 5.1,
+        "db": -180.0,
+        "label": "silence"
+      },
+      {
+        "t": 5.2,
+        "db": -180.0,
+        "label": "silence"
+      },
+      {
+        "t": 5.3,
+        "db": -180.0,
+        "label": "silence"
+      },
+      {
+        "t": 5.4,
+        "db": -76.48,
+        "label": "silence"
+      },
+      {
+        "t": 5.5,
+        "db": -24.01,
+        "label": "medium"
+      },
+      {
+        "t": 5.6,
+        "db": -180.0,
+        "label": "silence"
+      },
+      {
+        "t": 5.7,
+        "db": -180.0,
+        "label": "silence"
+      },
+      {
+        "t": 5.8,
+        "db": -180.0,
+        "label": "silence"
+      },
+      {
+        "t": 5.9,
+        "db": -82.93,
+        "label": "silence"
+      },
+      {
+        "t": 6.0,
+        "db": -23.98,
+        "label": "medium"
+      },
+      {
+        "t": 6.1,
+        "db": -180.0,
+        "label": "silence"
+      },
+      {
+        "t": 6.2,
+        "db": -180.0,
+        "label": "silence"
+      },
+      {
+        "t": 6.3,
+        "db": -180.0,
+        "label": "silence"
+      },
+      {
+        "t": 6.4,
+        "db": -70.8,
+        "label": "silence"
+      },
+      {
+        "t": 6.5,
+        "db": -24.02,
+        "label": "medium"
+      },
+      {
+        "t": 6.6,
+        "db": -180.0,
+        "label": "silence"
+      },
+      {
+        "t": 6.7,
+        "db": -180.0,
+        "label": "silence"
+      },
+      {
+        "t": 6.8,
+        "db": -180.0,
+        "label": "silence"
+      },
+      {
+        "t": 6.9,
+        "db": -69.41,
+        "label": "silence"
+      },
+      {
+        "t": 7.0,
+        "db": -23.99,
+        "label": "medium"
+      },
+      {
+        "t": 7.1,
+        "db": -180.0,
+        "label": "silence"
+      },
+      {
+        "t": 7.2,
+        "db": -180.0,
+        "label": "silence"
+      },
+      {
+        "t": 7.3,
+        "db": -180.0,
+        "label": "silence"
+      },
+      {
+        "t": 7.4,
+        "db": -69.06,
+        "label": "silence"
+      },
+      {
+        "t": 7.5,
+        "db": -24.03,
+        "label": "medium"
+      },
+      {
+        "t": 7.6,
+        "db": -180.0,
+        "label": "silence"
+      },
+      {
+        "t": 7.7,
+        "db": -180.0,
+        "label": "silence"
+      },
+      {
+        "t": 7.8,
+        "db": -180.0,
+        "label": "silence"
+      },
+      {
+        "t": 7.9,
+        "db": -71.75,
+        "label": "silence"
+      },
+      {
+        "t": 8.0,
+        "db": -24.02,
+        "label": "medium"
+      },
+      {
+        "t": 8.1,
+        "db": -180.0,
+        "label": "silence"
+      },
+      {
+        "t": 8.2,
+        "db": -180.0,
+        "label": "silence"
+      },
+      {
+        "t": 8.3,
+        "db": -180.0,
+        "label": "silence"
+      },
+      {
+        "t": 8.4,
+        "db": -71.84,
+        "label": "silence"
+      },
+      {
+        "t": 8.5,
+        "db": -23.99,
+        "label": "medium"
+      },
+      {
+        "t": 8.6,
+        "db": -77.85,
+        "label": "silence"
+      },
+      {
+        "t": 8.7,
+        "db": -8.62,
+        "label": "loud"
+      },
+      {
+        "t": 8.8,
+        "db": -100.14,
+        "label": "silence"
+      },
+      {
+        "t": 8.9,
+        "db": -75.48,
+        "label": "silence"
+      },
+      {
+        "t": 9.0,
+        "db": -24.0,
+        "label": "medium"
+      },
+      {
+        "t": 9.1,
+        "db": -180.0,
+        "label": "silence"
+      },
+      {
+        "t": 9.2,
+        "db": -180.0,
+        "label": "silence"
+      },
+      {
+        "t": 9.3,
+        "db": -180.0,
+        "label": "silence"
+      },
+      {
+        "t": 9.4,
+        "db": -73.71,
+        "label": "silence"
+      },
+      {
+        "t": 9.5,
+        "db": -24.02,
+        "label": "medium"
+      },
+      {
+        "t": 9.6,
+        "db": -180.0,
+        "label": "silence"
+      },
+      {
+        "t": 9.7,
+        "db": -180.0,
+        "label": "silence"
+      },
+      {
+        "t": 9.8,
+        "db": -180.0,
+        "label": "silence"
+      },
+      {
+        "t": 9.9,
+        "db": -83.89,
+        "label": "silence"
+      },
+      {
+        "t": 10.0,
+        "db": -23.99,
+        "label": "medium"
+      },
+      {
+        "t": 10.1,
+        "db": -180.0,
+        "label": "silence"
+      },
+      {
+        "t": 10.2,
+        "db": -180.0,
+        "label": "silence"
+      },
+      {
+        "t": 10.3,
+        "db": -180.0,
+        "label": "silence"
+      },
+      {
+        "t": 10.4,
+        "db": -69.9,
+        "label": "silence"
+      },
+      {
+        "t": 10.5,
+        "db": -24.02,
+        "label": "medium"
+      },
+      {
+        "t": 10.6,
+        "db": -180.0,
+        "label": "silence"
+      },
+      {
+        "t": 10.7,
+        "db": -180.0,
+        "label": "silence"
+      },
+      {
+        "t": 10.8,
+        "db": -180.0,
+        "label": "silence"
+      },
+      {
+        "t": 10.9,
+        "db": -70.61,
+        "label": "silence"
+      },
+      {
+        "t": 11.0,
+        "db": -24.01,
+        "label": "medium"
+      },
+      {
+        "t": 11.1,
+        "db": -180.0,
+        "label": "silence"
+      },
+      {
+        "t": 11.2,
+        "db": -180.0,
+        "label": "silence"
+      },
+      {
+        "t": 11.3,
+        "db": -180.0,
+        "label": "silence"
+      },
+      {
+        "t": 11.4,
+        "db": -74.53,
+        "label": "silence"
+      },
+      {
+        "t": 11.5,
+        "db": -24.0,
+        "label": "medium"
+      },
+      {
+        "t": 11.6,
+        "db": -180.0,
+        "label": "silence"
+      },
+      {
+        "t": 11.7,
+        "db": -180.0,
+        "label": "silence"
+      },
+      {
+        "t": 11.8,
+        "db": -180.0,
+        "label": "silence"
+      },
+      {
+        "t": 11.9,
+        "db": -79.95,
+        "label": "silence"
+      },
+      {
+        "t": 12.0,
+        "db": -23.99,
+        "label": "medium"
+      },
+      {
+        "t": 12.1,
+        "db": -180.0,
+        "label": "silence"
+      },
+      {
+        "t": 12.2,
+        "db": -180.0,
+        "label": "silence"
+      },
+      {
+        "t": 12.3,
+        "db": -180.0,
+        "label": "silence"
+      },
+      {
+        "t": 12.4,
+        "db": -73.28,
+        "label": "silence"
+      },
+      {
+        "t": 12.5,
+        "db": -24.03,
+        "label": "medium"
+      },
+      {
+        "t": 12.6,
+        "db": -180.0,
+        "label": "silence"
+      },
+      {
+        "t": 12.7,
+        "db": -180.0,
+        "label": "silence"
+      },
+      {
+        "t": 12.8,
+        "db": -180.0,
+        "label": "silence"
+      },
+      {
+        "t": 12.9,
+        "db": -75.23,
+        "label": "silence"
+      },
+      {
+        "t": 13.0,
+        "db": -24.03,
+        "label": "medium"
+      },
+      {
+        "t": 13.1,
+        "db": -180.0,
+        "label": "silence"
+      },
+      {
+        "t": 13.2,
+        "db": -180.0,
+        "label": "silence"
+      },
+      {
+        "t": 13.3,
+        "db": -180.0,
+        "label": "silence"
+      },
+      {
+        "t": 13.4,
+        "db": -73.68,
+        "label": "silence"
+      },
+      {
+        "t": 13.5,
+        "db": -24.03,
+        "label": "medium"
+      },
+      {
+        "t": 13.6,
+        "db": -180.0,
+        "label": "silence"
+      },
+      {
+        "t": 13.7,
+        "db": -180.0,
+        "label": "silence"
+      },
+      {
+        "t": 13.8,
+        "db": -180.0,
+        "label": "silence"
+      },
+      {
+        "t": 13.9,
+        "db": -71.79,
+        "label": "silence"
+      },
+      {
+        "t": 14.0,
+        "db": -24.01,
+        "label": "medium"
+      },
+      {
+        "t": 14.1,
+        "db": -180.0,
+        "label": "silence"
+      },
+      {
+        "t": 14.2,
+        "db": -180.0,
+        "label": "silence"
+      },
+      {
+        "t": 14.3,
+        "db": -180.0,
+        "label": "silence"
+      },
+      {
+        "t": 14.4,
+        "db": -70.5,
+        "label": "silence"
+      },
+      {
+        "t": 14.5,
+        "db": -24.0,
+        "label": "medium"
+      },
+      {
+        "t": 14.6,
+        "db": -180.0,
+        "label": "silence"
+      },
+      {
+        "t": 14.7,
+        "db": -180.0,
+        "label": "silence"
+      },
+      {
+        "t": 14.8,
+        "db": -180.0,
+        "label": "silence"
+      },
+      {
+        "t": 14.9,
+        "db": -71.27,
+        "label": "silence"
+      },
+      {
+        "t": 15.0,
+        "db": -24.0,
+        "label": "medium"
+      },
+      {
+        "t": 15.1,
+        "db": -180.0,
+        "label": "silence"
+      },
+      {
+        "t": 15.2,
+        "db": -180.0,
+        "label": "silence"
+      },
+      {
+        "t": 15.3,
+        "db": -180.0,
+        "label": "silence"
+      },
+      {
+        "t": 15.4,
+        "db": -69.37,
+        "label": "silence"
+      },
+      {
+        "t": 15.5,
+        "db": -24.0,
+        "label": "medium"
+      },
+      {
+        "t": 15.6,
+        "db": -180.0,
+        "label": "silence"
+      },
+      {
+        "t": 15.7,
+        "db": -180.0,
+        "label": "silence"
+      },
+      {
+        "t": 15.8,
+        "db": -180.0,
+        "label": "silence"
+      },
+      {
+        "t": 15.9,
+        "db": -69.32,
+        "label": "silence"
+      },
+      {
+        "t": 16.0,
+        "db": -23.98,
+        "label": "medium"
+      },
+      {
+        "t": 16.1,
+        "db": -180.0,
+        "label": "silence"
+      },
+      {
+        "t": 16.2,
+        "db": -180.0,
+        "label": "silence"
+      },
+      {
+        "t": 16.3,
+        "db": -180.0,
+        "label": "silence"
+      },
+      {
+        "t": 16.4,
+        "db": -71.48,
+        "label": "silence"
+      },
+      {
+        "t": 16.5,
+        "db": -24.02,
+        "label": "medium"
+      },
+      {
+        "t": 16.6,
+        "db": -180.0,
+        "label": "silence"
+      },
+      {
+        "t": 16.7,
+        "db": -180.0,
+        "label": "silence"
+      },
+      {
+        "t": 16.8,
+        "db": -180.0,
+        "label": "silence"
+      },
+      {
+        "t": 16.9,
+        "db": -79.64,
+        "label": "silence"
+      },
+      {
+        "t": 17.0,
+        "db": -24.0,
+        "label": "medium"
+      },
+      {
+        "t": 17.1,
+        "db": -180.0,
+        "label": "silence"
+      },
+      {
+        "t": 17.2,
+        "db": -52.25,
+        "label": "silence"
+      },
+      {
+        "t": 17.3,
+        "db": -8.67,
+        "label": "loud"
+      },
+      {
+        "t": 17.4,
+        "db": -71.26,
+        "label": "silence"
+      },
+      {
+        "t": 17.5,
+        "db": -23.98,
+        "label": "medium"
+      },
+      {
+        "t": 17.6,
+        "db": -180.0,
+        "label": "silence"
+      },
+      {
+        "t": 17.7,
+        "db": -180.0,
+        "label": "silence"
+      },
+      {
+        "t": 17.8,
+        "db": -180.0,
+        "label": "silence"
+      },
+      {
+        "t": 17.9,
+        "db": -72.46,
+        "label": "silence"
+      },
+      {
+        "t": 18.0,
+        "db": -24.01,
+        "label": "medium"
+      },
+      {
+        "t": 18.1,
+        "db": -180.0,
+        "label": "silence"
+      },
+      {
+        "t": 18.2,
+        "db": -180.0,
+        "label": "silence"
+      },
+      {
+        "t": 18.3,
+        "db": -180.0,
+        "label": "silence"
+      },
+      {
+        "t": 18.4,
+        "db": -82.61,
+        "label": "silence"
+      },
+      {
+        "t": 18.5,
+        "db": -24.01,
+        "label": "medium"
+      },
+      {
+        "t": 18.6,
+        "db": -180.0,
+        "label": "silence"
+      },
+      {
+        "t": 18.7,
+        "db": -180.0,
+        "label": "silence"
+      },
+      {
+        "t": 18.8,
+        "db": -180.0,
+        "label": "silence"
+      },
+      {
+        "t": 18.9,
+        "db": -71.36,
+        "label": "silence"
+      },
+      {
+        "t": 19.0,
+        "db": -23.99,
+        "label": "medium"
+      },
+      {
+        "t": 19.1,
+        "db": -180.0,
+        "label": "silence"
+      },
+      {
+        "t": 19.2,
+        "db": -180.0,
+        "label": "silence"
+      },
+      {
+        "t": 19.3,
+        "db": -180.0,
+        "label": "silence"
+      },
+      {
+        "t": 19.4,
+        "db": -70.41,
+        "label": "silence"
+      },
+      {
+        "t": 19.5,
+        "db": -24.03,
+        "label": "medium"
+      },
+      {
+        "t": 19.6,
+        "db": -180.0,
+        "label": "silence"
+      },
+      {
+        "t": 19.7,
+        "db": -180.0,
+        "label": "silence"
+      },
+      {
+        "t": 19.8,
+        "db": -180.0,
+        "label": "silence"
+      },
+      {
+        "t": 19.9,
+        "db": -74.83,
+        "label": "silence"
+      },
+      {
+        "t": 20.0,
+        "db": -24.01,
+        "label": "medium"
+      },
+      {
+        "t": 20.1,
+        "db": -180.0,
+        "label": "silence"
+      },
+      {
+        "t": 20.2,
+        "db": -180.0,
+        "label": "silence"
+      },
+      {
+        "t": 20.3,
+        "db": -180.0,
+        "label": "silence"
+      },
+      {
+        "t": 20.4,
+        "db": -88.09,
+        "label": "silence"
+      },
+      {
+        "t": 20.5,
+        "db": -24.0,
+        "label": "medium"
+      },
+      {
+        "t": 20.6,
+        "db": -180.0,
+        "label": "silence"
+      },
+      {
+        "t": 20.7,
+        "db": -180.0,
+        "label": "silence"
+      },
+      {
+        "t": 20.8,
+        "db": -180.0,
+        "label": "silence"
+      },
+      {
+        "t": 20.9,
+        "db": -180.0,
+        "label": "silence"
+      },
+      {
+        "t": 21.0,
+        "db": -180.0,
+        "label": "silence"
+      }
+    ],
+    "sample_rate": 22050
+  },
+  "shots": [
+    {
+      "start": 0.0,
+      "end": 4.0,
+      "idx": 0,
+      "content": {
+        "feature": [
+          0.289358,
+          0.0,
+          0.260927,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.153559,
+          0.0,
+          0.0,
+          0.0,
+          0.037044,
+          0.740888,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.390331,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.34923,
+          0.001327,
+          0.0
+        ],
+        "tags": [
+          "dark",
+          "flat"
+        ],
+        "brightness": 0.1261,
+        "motion": 0.0045,
+        "contrast": 0.1529
+      },
+      "transition_in": null,
+      "transition_out": {
+        "type": "dissolve",
+        "duration": 4.0,
+        "location": 4.0,
+        "source": "dissolve",
+        "confidence": 0.628
+      },
+      "duration": 4.0,
+      "beats": [
+        {
+          "t": 0.02,
+          "strength": 0.0238,
+          "energy": "normal"
+        },
+        {
+          "t": 0.4689,
+          "strength": 203.8316,
+          "energy": "normal"
+        },
+        {
+          "t": 0.9678,
+          "strength": 204.6711,
+          "energy": "normal"
+        },
+        {
+          "t": 1.4667,
+          "strength": 206.0169,
+          "energy": "normal"
+        },
+        {
+          "t": 1.9655,
+          "strength": 204.1821,
+          "energy": "normal"
+        },
+        {
+          "t": 2.4644,
+          "strength": 199.0053,
+          "energy": "normal"
+        },
+        {
+          "t": 2.9732,
+          "strength": 193.6482,
+          "energy": "normal"
+        },
+        {
+          "t": 3.4721,
+          "strength": 189.3638,
+          "energy": "normal"
+        },
+        {
+          "t": 3.971,
+          "strength": 194.4738,
+          "energy": "normal"
+        }
+      ],
+      "motion": {
+        "idx": 0,
+        "classification": "handheld",
+        "pan_x": 0.0,
+        "pan_y": 0.4,
+        "pan_mag": 0.4,
+        "zoom": -0.0093,
+        "shake": 11.9139,
+        "segments": [
+          {
+            "t": 0.0667,
+            "dx": 0.0,
+            "dy": -36.0,
+            "zoom": 0.0098
+          },
+          {
+            "t": 0.5333,
+            "dx": 0.0,
+            "dy": 11.0,
+            "zoom": 0.069
+          },
+          {
+            "t": 1.0,
+            "dx": 0.0,
+            "dy": 21.0,
+            "zoom": -0.0253
+          },
+          {
+            "t": 1.4667,
+            "dx": 0.0,
+            "dy": 47.0,
+            "zoom": 0.2384
+          },
+          {
+            "t": 1.9333,
+            "dx": 0.0,
+            "dy": -8.0,
+            "zoom": 0.1308
+          },
+          {
+            "t": 2.4,
+            "dx": 0.0,
+            "dy": 0.0,
+            "zoom": 0.3277
+          },
+          {
+            "t": 2.8667,
+            "dx": 0.0,
+            "dy": 0.0,
+            "zoom": 0.0202
+          },
+          {
+            "t": 3.3333,
+            "dx": 0.0,
+            "dy": -6.0,
+            "zoom": 0.1642
+          },
+          {
+            "t": 3.8,
+            "dx": 0.0,
+            "dy": 0.0,
+            "zoom": 0.1281
+          }
+        ]
+      },
+      "audio": {
+        "energy": 0.5,
+        "onset_rate": 2.25
+      },
+      "text": []
+    },
+    {
+      "start": 4.0,
+      "end": 6.7333,
+      "idx": 1,
+      "content": {
+        "feature": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.707107,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.707107,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "tags": [
+          "bright",
+          "motion",
+          "textured"
+        ],
+        "brightness": 0.9053,
+        "motion": 0.1246,
+        "contrast": 0.145
+      },
+      "transition_in": {
+        "type": "dissolve",
+        "duration": 4.0,
+        "location": 4.0,
+        "source": "dissolve",
+        "confidence": 0.628
+      },
+      "transition_out": {
+        "type": "cut",
+        "location": 6.7333,
+        "source": "cut"
+      },
+      "duration": 2.7333,
+      "beats": [
+        {
+          "t": 4.4698,
+          "strength": 201.0162,
+          "energy": "normal"
+        },
+        {
+          "t": 4.9687,
+          "strength": 204.7762,
+          "energy": "normal"
+        },
+        {
+          "t": 5.4676,
+          "strength": 207.1301,
+          "energy": "normal"
+        },
+        {
+          "t": 5.9664,
+          "strength": 206.742,
+          "energy": "normal"
+        },
+        {
+          "t": 6.4653,
+          "strength": 202.894,
+          "energy": "normal"
+        }
+      ],
+      "motion": {
+        "idx": 1,
+        "classification": "static",
+        "pan_x": 0.0,
+        "pan_y": 0.0,
+        "pan_mag": 0.0,
+        "zoom": -0.0132,
+        "shake": 0.0,
+        "segments": [
+          {
+            "t": 4.0,
+            "dx": 0.0,
+            "dy": 0.0,
+            "zoom": -0.5534
+          },
+          {
+            "t": 4.3333,
+            "dx": 0.0,
+            "dy": 0.0,
+            "zoom": 0.0
+          },
+          {
+            "t": 4.6667,
+            "dx": 0.0,
+            "dy": 0.0,
+            "zoom": 0.0
+          },
+          {
+            "t": 5.0,
+            "dx": 0.0,
+            "dy": 0.0,
+            "zoom": 0.0
+          },
+          {
+            "t": 5.3333,
+            "dx": 0.0,
+            "dy": 0.0,
+            "zoom": 0.0
+          },
+          {
+            "t": 5.6667,
+            "dx": 0.0,
+            "dy": 0.0,
+            "zoom": 0.0
+          },
+          {
+            "t": 6.0,
+            "dx": 0.0,
+            "dy": 0.0,
+            "zoom": 0.0
+          },
+          {
+            "t": 6.3333,
+            "dx": 0.0,
+            "dy": 0.0,
+            "zoom": 0.0
+          },
+          {
+            "t": 6.6667,
+            "dx": 0.0,
+            "dy": 0.0,
+            "zoom": 0.0
+          }
+        ]
+      },
+      "audio": {
+        "energy": 0.5,
+        "onset_rate": 1.8292906011048917
+      },
+      "text": []
+    },
+    {
+      "start": 6.7333,
+      "end": 11.0,
+      "idx": 2,
+      "content": {
+        "feature": [
+          0.371235,
+          0.0,
+          0.113348,
+          0.162168,
+          0.093459,
+          0.0,
+          0.0,
+          0.071114,
+          0.0,
+          0.0,
+          0.018306,
+          0.0,
+          0.411882,
+          0.0,
+          0.0,
+          0.417749,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.660383,
+          0.0,
+          0.169248,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "tags": [
+          "dark",
+          "textured"
+        ],
+        "brightness": 0.1885,
+        "motion": 0.0486,
+        "contrast": 0.2623
+      },
+      "transition_in": {
+        "type": "cut",
+        "location": 6.7333,
+        "source": "cut"
+      },
+      "transition_out": {
+        "type": "cut",
+        "location": 11.0,
+        "source": "cut"
+      },
+      "duration": 4.2667,
+      "beats": [
+        {
+          "t": 6.9642,
+          "strength": 197.7046,
+          "energy": "normal"
+        },
+        {
+          "t": 7.473,
+          "strength": 191.8314,
+          "energy": "normal"
+        },
+        {
+          "t": 7.9719,
+          "strength": 188.1656,
+          "energy": "normal"
+        },
+        {
+          "t": 8.4707,
+          "strength": 196.0721,
+          "energy": "normal"
+        },
+        {
+          "t": 8.9696,
+          "strength": 201.9177,
+          "energy": "normal"
+        },
+        {
+          "t": 9.4685,
+          "strength": 205.6681,
+          "energy": "normal"
+        },
+        {
+          "t": 9.9673,
+          "strength": 207.2532,
+          "energy": "normal"
+        },
+        {
+          "t": 10.4662,
+          "strength": 205.2569,
+          "energy": "normal"
+        },
+        {
+          "t": 10.9651,
+          "strength": 202.0999,
+          "energy": "normal"
+        }
+      ],
+      "motion": {
+        "idx": 2,
+        "classification": "handheld",
+        "pan_x": 0.0,
+        "pan_y": -2.7077,
+        "pan_mag": 2.7077,
+        "zoom": -0.0,
+        "shake": 14.5006,
+        "segments": [
+          {
+            "t": 6.7333,
+            "dx": 0.0,
+            "dy": 0.0,
+            "zoom": 0.0
+          },
+          {
+            "t": 7.2667,
+            "dx": 0.0,
+            "dy": 0.0,
+            "zoom": -0.0804
+          },
+          {
+            "t": 7.8,
+            "dx": 0.0,
+            "dy": 0.0,
+            "zoom": -0.806
+          },
+          {
+            "t": 8.3333,
+            "dx": 0.0,
+            "dy": -48.0,
+            "zoom": 0.0168
+          },
+          {
+            "t": 8.8667,
+            "dx": 0.0,
+            "dy": 33.0,
+            "zoom": 0.227
+          },
+          {
+            "t": 9.4,
+            "dx": 0.0,
+            "dy": 0.0,
+            "zoom": 0.026
+          },
+          {
+            "t": 9.9333,
+            "dx": 0.0,
+            "dy": 0.0,
+            "zoom": 0.0535
+          },
+          {
+            "t": 10.4667,
+            "dx": 0.0,
+            "dy": 0.0,
+            "zoom": -0.5117
+          },
+          {
+            "t": 11.0,
+            "dx": 0.0,
+            "dy": 0.0,
+            "zoom": -1.2273
+          }
+        ]
+      },
+      "audio": {
+        "energy": 0.5,
+        "onset_rate": 2.1093585206365573
+      },
+      "text": []
+    },
+    {
+      "start": 11.0,
+      "end": 14.0,
+      "idx": 3,
+      "content": {
+        "feature": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "tags": [
+          "bright",
+          "motion",
+          "flat"
+        ],
+        "brightness": 0.9481,
+        "motion": 0.0637,
+        "contrast": 0.1098
+      },
+      "transition_in": {
+        "type": "cut",
+        "location": 11.0,
+        "source": "cut"
+      },
+      "transition_out": {
+        "type": "cut",
+        "location": 14.0,
+        "source": "cut"
+      },
+      "duration": 3.0,
+      "beats": [
+        {
+          "t": 11.4739,
+          "strength": 196.7476,
+          "energy": "normal"
+        },
+        {
+          "t": 11.9728,
+          "strength": 191.9403,
+          "energy": "normal"
+        },
+        {
+          "t": 12.4717,
+          "strength": 189.1452,
+          "energy": "normal"
+        },
+        {
+          "t": 12.9705,
+          "strength": 197.0755,
+          "energy": "normal"
+        },
+        {
+          "t": 13.4694,
+          "strength": 202.3787,
+          "energy": "normal"
+        },
+        {
+          "t": 13.9683,
+          "strength": 205.7164,
+          "energy": "normal"
+        }
+      ],
+      "motion": {
+        "idx": 3,
+        "classification": "static",
+        "pan_x": 0.0,
+        "pan_y": 0.0,
+        "pan_mag": 0.0,
+        "zoom": -0.0074,
+        "shake": 0.0,
+        "segments": [
+          {
+            "t": 11.0,
+            "dx": 0.0,
+            "dy": 0.0,
+            "zoom": -1.2273
+          },
+          {
+            "t": 11.3333,
+            "dx": 0.0,
+            "dy": 0.0,
+            "zoom": 0.0
+          },
+          {
+            "t": 11.6667,
+            "dx": 0.0,
+            "dy": 0.0,
+            "zoom": 0.0
+          },
+          {
+            "t": 12.0,
+            "dx": 0.0,
+            "dy": 0.0,
+            "zoom": 0.0
+          },
+          {
+            "t": 12.3333,
+            "dx": 0.0,
+            "dy": 0.0,
+            "zoom": 0.0
+          },
+          {
+            "t": 12.6667,
+            "dx": 0.0,
+            "dy": 0.0,
+            "zoom": 0.0
+          },
+          {
+            "t": 13.0,
+            "dx": 0.0,
+            "dy": 0.0,
+            "zoom": 0.0
+          },
+          {
+            "t": 13.3333,
+            "dx": 0.0,
+            "dy": 0.0,
+            "zoom": 0.0
+          },
+          {
+            "t": 13.6667,
+            "dx": 0.0,
+            "dy": 0.0,
+            "zoom": 0.0
+          },
+          {
+            "t": 14.0,
+            "dx": 0.0,
+            "dy": 0.0,
+            "zoom": 0.8886
+          }
+        ]
+      },
+      "audio": {
+        "energy": 0.5,
+        "onset_rate": 2.0
+      },
+      "text": []
+    },
+    {
+      "start": 14.0,
+      "end": 18.0,
+      "idx": 4,
+      "content": {
+        "feature": [
+          0.32096,
+          0.0,
+          0.001257,
+          0.0,
+          0.458138,
+          0.0,
+          0.0,
+          0.072987,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.300189,
+          0.0,
+          0.0,
+          0.028445,
+          0.0,
+          0.0,
+          0.454895,
+          0.069813,
+          0.33614,
+          0.0,
+          0.0,
+          0.0,
+          0.515798,
+          0.001405,
+          0.0,
+          0.0
+        ],
+        "tags": [
+          "dark",
+          "textured"
+        ],
+        "brightness": 0.2152,
+        "motion": 0.0326,
+        "contrast": 0.2092
+      },
+      "transition_in": {
+        "type": "cut",
+        "location": 14.0,
+        "source": "cut"
+      },
+      "transition_out": {
+        "type": "cut",
+        "location": 18.0,
+        "source": "cut"
+      },
+      "duration": 4.0,
+      "beats": [
+        {
+          "t": 14.4671,
+          "strength": 206.7879,
+          "energy": "normal"
+        },
+        {
+          "t": 14.966,
+          "strength": 205.2162,
+          "energy": "normal"
+        },
+        {
+          "t": 15.4649,
+          "strength": 200.8446,
+          "energy": "normal"
+        },
+        {
+          "t": 15.9737,
+          "strength": 194.6621,
+          "energy": "normal"
+        },
+        {
+          "t": 16.4726,
+          "strength": 190.509,
+          "energy": "normal"
+        },
+        {
+          "t": 16.9714,
+          "strength": 191.6543,
+          "energy": "normal"
+        },
+        {
+          "t": 17.4703,
+          "strength": 198.9697,
+          "energy": "normal"
+        },
+        {
+          "t": 17.9692,
+          "strength": 203.7053,
+          "energy": "normal"
+        }
+      ],
+      "motion": {
+        "idx": 4,
+        "classification": "handheld",
+        "pan_x": 0.0,
+        "pan_y": 2.9016,
+        "pan_mag": 2.9016,
+        "zoom": -0.0,
+        "shake": 11.0627,
+        "segments": [
+          {
+            "t": 14.0,
+            "dx": 0.0,
+            "dy": 0.0,
+            "zoom": 0.8886
+          },
+          {
+            "t": 14.4667,
+            "dx": 0.0,
+            "dy": 0.0,
+            "zoom": -0.0886
+          },
+          {
+            "t": 14.9333,
+            "dx": 0.0,
+            "dy": 0.0,
+            "zoom": 0.0684
+          },
+          {
+            "t": 15.4,
+            "dx": 0.0,
+            "dy": 0.0,
+            "zoom": -0.1161
+          },
+          {
+            "t": 15.8667,
+            "dx": 0.0,
+            "dy": 6.0,
+            "zoom": -0.4346
+          },
+          {
+            "t": 16.3333,
+            "dx": 0.0,
+            "dy": 0.0,
+            "zoom": -0.0155
+          },
+          {
+            "t": 16.8,
+            "dx": 0.0,
+            "dy": -12.0,
+            "zoom": 0.1964
+          },
+          {
+            "t": 17.2667,
+            "dx": 0.0,
+            "dy": 0.0,
+            "zoom": -0.1616
+          },
+          {
+            "t": 17.7333,
+            "dx": 0.0,
+            "dy": -11.0,
+            "zoom": -0.1335
+          }
+        ]
+      },
+      "audio": {
+        "energy": 0.5,
+        "onset_rate": 2.0
+      },
+      "text": []
+    },
+    {
+      "start": 18.0,
+      "end": 20.7333,
+      "idx": 5,
+      "content": {
+        "feature": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.707107,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.707107,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "tags": [
+          "bright",
+          "motion",
+          "textured"
+        ],
+        "brightness": 0.9491,
+        "motion": 0.0631,
+        "contrast": 0.1116
+      },
+      "transition_in": {
+        "type": "cut",
+        "location": 18.0,
+        "source": "cut"
+      },
+      "transition_out": {
+        "type": "cut",
+        "location": 20.7333,
+        "source": "cut"
+      },
+      "duration": 2.7333,
+      "beats": [
+        {
+          "t": 18.468,
+          "strength": 206.5448,
+          "energy": "normal"
+        },
+        {
+          "t": 18.9669,
+          "strength": 206.8572,
+          "energy": "normal"
+        },
+        {
+          "t": 19.4658,
+          "strength": 204.1136,
+          "energy": "normal"
+        },
+        {
+          "t": 19.9646,
+          "strength": 200.1894,
+          "energy": "normal"
+        },
+        {
+          "t": 20.4735,
+          "strength": 194.8325,
+          "energy": "normal"
+        }
+      ],
+      "motion": {
+        "idx": 5,
+        "classification": "static",
+        "pan_x": 0.0,
+        "pan_y": 0.0,
+        "pan_mag": 0.0,
+        "zoom": -0.0093,
+        "shake": 0.0,
+        "segments": [
+          {
+            "t": 18.0,
+            "dx": 0.0,
+            "dy": 0.0,
+            "zoom": -0.3891
+          },
+          {
+            "t": 18.3333,
+            "dx": 0.0,
+            "dy": 0.0,
+            "zoom": 0.0
+          },
+          {
+            "t": 18.6667,
+            "dx": 0.0,
+            "dy": 0.0,
+            "zoom": 0.0
+          },
+          {
+            "t": 19.0,
+            "dx": 0.0,
+            "dy": 0.0,
+            "zoom": 0.0
+          },
+          {
+            "t": 19.3333,
+            "dx": 0.0,
+            "dy": 0.0,
+            "zoom": 0.0
+          },
+          {
+            "t": 19.6667,
+            "dx": 0.0,
+            "dy": 0.0,
+            "zoom": 0.0
+          },
+          {
+            "t": 20.0,
+            "dx": 0.0,
+            "dy": 0.0,
+            "zoom": 0.0
+          },
+          {
+            "t": 20.3333,
+            "dx": 0.0,
+            "dy": 0.0,
+            "zoom": 0.0
+          },
+          {
+            "t": 20.6667,
+            "dx": 0.0,
+            "dy": 0.0,
+            "zoom": 0.0
+          }
+        ]
+      },
+      "audio": {
+        "energy": 0.5,
+        "onset_rate": 1.8292906011048917
+      },
+      "text": []
+    },
+    {
+      "start": 20.7333,
+      "end": 20.9333,
+      "idx": 6,
+      "content": {
+        "feature": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.707107,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.707107,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "tags": [
+          "bright",
+          "motion",
+          "textured"
+        ],
+        "brightness": 0.9399,
+        "motion": 0.0621,
+        "contrast": 0.1157
+      },
+      "transition_in": {
+        "type": "cut",
+        "location": 20.7333,
+        "source": "cut"
+      },
+      "transition_out": null,
+      "duration": 0.2,
+      "beats": [
+        {
+          "t": 20.8327,
+          "strength": 0.0,
+          "energy": "normal"
+        }
+      ],
+      "motion": {
+        "idx": 6,
+        "classification": "static",
+        "pan_x": 0.0,
+        "pan_y": 0.0,
+        "pan_mag": 0.0,
+        "zoom": 0.0,
+        "shake": 0.0,
+        "segments": [
+          {
+            "t": 20.7333,
+            "dx": 0.0,
+            "dy": 0.0,
+            "zoom": 0.0
+          },
+          {
+            "t": 20.8,
+            "dx": 0.0,
+            "dy": 0.0,
+            "zoom": 0.0
+          },
+          {
+            "t": 20.8667,
+            "dx": 0.0,
+            "dy": 0.0,
+            "zoom": 0.0
+          },
+          {
+            "t": 20.9333,
+            "dx": 0.0,
+            "dy": 0.0,
+            "zoom": 0.0
+          }
+        ]
+      },
+      "audio": {
+        "energy": 0.5,
+        "onset_rate": 5.0
+      },
+      "text": []
+    }
+  ],
+  "sound_events": [
+    {
+      "t": 0.4689,
+      "type": "impact",
+      "strength": 203.83,
+      "width": 0.0299,
+      "on_beat": true
+    },
+    {
+      "t": 0.9279,
+      "type": "impact",
+      "strength": 1.45,
+      "width": 0.0698,
+      "on_beat": true
+    },
+    {
+      "t": 1.4667,
+      "type": "impact",
+      "strength": 206.02,
+      "width": 0.0299,
+      "on_beat": true
+    },
+    {
+      "t": 1.9655,
+      "type": "impact",
+      "strength": 204.18,
+      "width": 0.0299,
+      "on_beat": true
+    },
+    {
+      "t": 2.4644,
+      "type": "impact",
+      "strength": 199.01,
+      "width": 0.0299,
+      "on_beat": true
+    },
+    {
+      "t": 2.9732,
+      "type": "impact",
+      "strength": 193.65,
+      "width": 0.02,
+      "on_beat": true
+    },
+    {
+      "t": 3.4721,
+      "type": "impact",
+      "strength": 189.36,
+      "width": 0.02,
+      "on_beat": true
+    },
+    {
+      "t": 3.971,
+      "type": "impact",
+      "strength": 194.47,
+      "width": 0.02,
+      "on_beat": true
+    },
+    {
+      "t": 4.4698,
+      "type": "impact",
+      "strength": 201.02,
+      "width": 0.0299,
+      "on_beat": true
+    },
+    {
+      "t": 4.9687,
+      "type": "impact",
+      "strength": 204.78,
+      "width": 0.0299,
+      "on_beat": true
+    },
+    {
+      "t": 5.4676,
+      "type": "impact",
+      "strength": 207.13,
+      "width": 0.0299,
+      "on_beat": true
+    },
+    {
+      "t": 5.9664,
+      "type": "impact",
+      "strength": 206.74,
+      "width": 0.0299,
+      "on_beat": true
+    },
+    {
+      "t": 6.4653,
+      "type": "impact",
+      "strength": 202.89,
+      "width": 0.0299,
+      "on_beat": true
+    },
+    {
+      "t": 6.9642,
+      "type": "impact",
+      "strength": 197.7,
+      "width": 0.0299,
+      "on_beat": true
+    },
+    {
+      "t": 7.473,
+      "type": "impact",
+      "strength": 191.83,
+      "width": 0.02,
+      "on_beat": true
+    },
+    {
+      "t": 7.9719,
+      "type": "impact",
+      "strength": 188.17,
+      "width": 0.02,
+      "on_beat": true
+    },
+    {
+      "t": 8.4707,
+      "type": "impact",
+      "strength": 196.07,
+      "width": 0.02,
+      "on_beat": true
+    },
+    {
+      "t": 8.6703,
+      "type": "impact",
+      "strength": 576.56,
+      "width": 0.0299,
+      "on_beat": false
+    },
+    {
+      "t": 8.9696,
+      "type": "impact",
+      "strength": 201.92,
+      "width": 0.0299,
+      "on_beat": true
+    },
+    {
+      "t": 9.4685,
+      "type": "impact",
+      "strength": 205.67,
+      "width": 0.0299,
+      "on_beat": true
+    },
+    {
+      "t": 9.9673,
+      "type": "impact",
+      "strength": 207.25,
+      "width": 0.0299,
+      "on_beat": true
+    },
+    {
+      "t": 10.4662,
+      "type": "impact",
+      "strength": 205.26,
+      "width": 0.0299,
+      "on_beat": true
+    },
+    {
+      "t": 10.9651,
+      "type": "impact",
+      "strength": 202.1,
+      "width": 0.0299,
+      "on_beat": true
+    },
+    {
+      "t": 11.4739,
+      "type": "impact",
+      "strength": 196.75,
+      "width": 0.02,
+      "on_beat": true
+    },
+    {
+      "t": 11.9728,
+      "type": "impact",
+      "strength": 191.94,
+      "width": 0.02,
+      "on_beat": true
+    },
+    {
+      "t": 12.4717,
+      "type": "impact",
+      "strength": 189.15,
+      "width": 0.02,
+      "on_beat": true
+    },
+    {
+      "t": 12.9705,
+      "type": "impact",
+      "strength": 197.08,
+      "width": 0.02,
+      "on_beat": true
+    },
+    {
+      "t": 13.4694,
+      "type": "impact",
+      "strength": 202.38,
+      "width": 0.0299,
+      "on_beat": true
+    },
+    {
+      "t": 13.9683,
+      "type": "impact",
+      "strength": 205.72,
+      "width": 0.0299,
+      "on_beat": true
+    },
+    {
+      "t": 14.4671,
+      "type": "impact",
+      "strength": 206.79,
+      "width": 0.0299,
+      "on_beat": true
+    },
+    {
+      "t": 14.966,
+      "type": "impact",
+      "strength": 205.22,
+      "width": 0.0299,
+      "on_beat": true
+    },
+    {
+      "t": 15.4649,
+      "type": "impact",
+      "strength": 200.84,
+      "width": 0.0299,
+      "on_beat": true
+    },
+    {
+      "t": 15.9737,
+      "type": "impact",
+      "strength": 194.66,
+      "width": 0.02,
+      "on_beat": true
+    },
+    {
+      "t": 16.4726,
+      "type": "impact",
+      "strength": 190.51,
+      "width": 0.02,
+      "on_beat": true
+    },
+    {
+      "t": 16.9714,
+      "type": "impact",
+      "strength": 191.65,
+      "width": 0.02,
+      "on_beat": true
+    },
+    {
+      "t": 17.2707,
+      "type": "impact",
+      "strength": 572.13,
+      "width": 0.0299,
+      "on_beat": false
+    },
+    {
+      "t": 17.4703,
+      "type": "impact",
+      "strength": 198.97,
+      "width": 0.02,
+      "on_beat": true
+    },
+    {
+      "t": 17.9692,
+      "type": "impact",
+      "strength": 203.71,
+      "width": 0.0299,
+      "on_beat": true
+    },
+    {
+      "t": 18.468,
+      "type": "impact",
+      "strength": 206.54,
+      "width": 0.0299,
+      "on_beat": true
+    },
+    {
+      "t": 18.9669,
+      "type": "impact",
+      "strength": 206.86,
+      "width": 0.0299,
+      "on_beat": true
+    },
+    {
+      "t": 19.4658,
+      "type": "impact",
+      "strength": 204.11,
+      "width": 0.0299,
+      "on_beat": true
+    },
+    {
+      "t": 19.9646,
+      "type": "impact",
+      "strength": 200.19,
+      "width": 0.0299,
+      "on_beat": true
+    },
+    {
+      "t": 20.4735,
+      "type": "impact",
+      "strength": 194.83,
+      "width": 0.02,
+      "on_beat": true
+    }
+  ],
+  "structure": [
+    {
+      "act": "intro",
+      "start": 0.0,
+      "end": 11.0
+    },
+    {
+      "act": "build",
+      "start": 11.0,
+      "end": 20.9333
+    }
+  ],
+  "color_look": {
+    "matrix": [
+      1.0112,
+      0.4,
+      0.4,
+      0.4,
+      1.014,
+      0.4,
+      0.4,
+      0.4,
+      0.9757
+    ],
+    "lut": "LUT_3D_SIZE 17\nDOMAIN_MIN 0 0 0\nDOMAIN_MAX 1 1 1\n\n0.000000 0.000000 0.000000\n0.050000 0.050000 0.121962\n0.100000 0.100000 0.243924\n0.150000 0.150000 0.365886\n0.200000 0.200000 0.487848\n0.250000 0.250000 0.609810\n0.300000 0.300000 0.731771\n0.350000 0.350000 0.853733\n0.400000 0.400000 0.975695\n0.025000 0.063376 0.025000\n0.075000 0.113376 0.146962\n0.125000 0.163376 0.268924\n0.175000 0.213376 0.390886\n0.225000 0.263376 0.512848\n0.275000 0.313376 0.634810\n0.325000 0.363376 0.756771\n0.375000 0.413376 0.878733\n0.425000 0.463376 1.000000\n0.050000 0.126753 0.050000\n0.100000 0.176753 0.171962\n0.150000 0.226753 0.293924\n0.200000 0.276753 0.415886\n0.250000 0.326753 0.537848\n0.300000 0.376753 0.659810\n0.350000 0.426753 0.781771\n0.400000 0.476753 0.903733\n0.450000 0.526753 1.000000\n0.075000 0.190129 0.075000\n0.125000 0.240129 0.196962\n0.175000 0.290129 0.318924\n0.225000 0.340129 0.440886\n0.275000 0.390129 0.562848\n0.325000 0.440129 0.684810\n0.375000 0.490129 0.806771\n0.425000 0.540129 0.928733\n0.475000 0.590129 1.000000\n0.100000 0.253506 0.100000\n0.150000 0.303506 0.221962\n0.200000 0.353506 0.343924\n0.250000 0.403506 0.465886\n0.300000 0.453506 0.587848\n0.350000 0.503506 0.709810\n0.400000 0.553506 0.831771\n0.450000 0.603506 0.953733\n0.500000 0.653506 1.000000\n0.125000 0.316882 0.125000\n0.175000 0.366882 0.246962\n0.225000 0.416882 0.368924\n0.275000 0.466882 0.490886\n0.325000 0.516882 0.612848\n0.375000 0.566882 0.734810\n0.425000 0.616882 0.856771\n0.475000 0.666882 0.978733\n0.525000 0.716882 1.000000\n0.150000 0.380259 0.150000\n0.200000 0.430259 0.271962\n0.250000 0.480259 0.393924\n0.300000 0.530259 0.515886\n0.350000 0.580259 0.637848\n0.400000 0.630259 0.759810\n0.450000 0.680259 0.881771\n0.500000 0.730259 1.000000\n0.550000 0.780259 1.000000\n0.175000 0.443635 0.175000\n0.225000 0.493635 0.296962\n0.275000 0.543635 0.418924\n0.325000 0.593635 0.540886\n0.375000 0.643635 0.662848\n0.425000 0.693635 0.784810\n0.475000 0.743635 0.906771\n0.525000 0.793635 1.000000\n0.575000 0.843635 1.000000\n0.200000 0.507012 0.200000\n0.250000 0.557012 0.321962\n0.300000 0.607012 0.443924\n0.350000 0.657012 0.565886\n0.400000 0.707012 0.687848\n0.450000 0.757012 0.809810\n0.500000 0.807012 0.931771\n0.550000 0.857012 1.000000\n0.600000 0.907012 1.000000\n0.225000 0.570388 0.225000\n0.275000 0.620388 0.346962\n0.325000 0.670388 0.468924\n0.375000 0.720388 0.590886\n0.425000 0.770388 0.712848\n0.475000 0.820388 0.834810\n0.525000 0.870388 0.956771\n0.575000 0.920388 1.000000\n0.625000 0.970388 1.000000\n0.250000 0.633765 0.250000\n0.300000 0.683765 0.371962\n0.350000 0.733765 0.493924\n0.400000 0.783765 0.615886\n0.450000 0.833765 0.737848\n0.500000 0.883765 0.859810\n0.550000 0.933765 0.981771\n0.600000 0.983765 1.000000\n0.650000 1.000000 1.000000\n0.275000 0.697141 0.275000\n0.325000 0.747141 0.396962\n0.375000 0.797141 0.518924\n0.425000 0.847141 0.640886\n0.475000 0.897141 0.762848\n0.525000 0.947141 0.884810\n0.575000 0.997141 1.000000\n0.625000 1.000000 1.000000\n0.675000 1.000000 1.000000\n0.300000 0.760518 0.300000\n0.350000 0.810518 0.421962\n0.400000 0.860518 0.543924\n0.450000 0.910518 0.665886\n0.500000 0.960518 0.787848\n0.550000 1.000000 0.909810\n0.600000 1.000000 1.000000\n0.650000 1.000000 1.000000\n0.700000 1.000000 1.000000\n0.325000 0.823894 0.325000\n0.375000 0.873894 0.446962\n0.425000 0.923894 0.568924\n0.475000 0.973894 0.690886\n0.525000 1.000000 0.812848\n0.575000 1.000000 0.934810\n0.625000 1.000000 1.000000\n0.675000 1.000000 1.000000\n0.725000 1.000000 1.000000\n0.350000 0.887270 0.350000\n0.400000 0.937270 0.471962\n0.450000 0.987270 0.593924\n0.500000 1.000000 0.715886\n0.550000 1.000000 0.837848\n0.600000 1.000000 0.959810\n0.650000 1.000000 1.000000\n0.700000 1.000000 1.000000\n0.750000 1.000000 1.000000\n0.375000 0.950647 0.375000\n0.425000 1.000000 0.496962\n0.475000 1.000000 0.618924\n0.525000 1.000000 0.740886\n0.575000 1.000000 0.862848\n0.625000 1.000000 0.984810\n0.675000 1.000000 1.000000\n0.725000 1.000000 1.000000\n0.775000 1.000000 1.000000\n0.400000 1.000000 0.400000\n0.450000 1.000000 0.521962\n0.500000 1.000000 0.643924\n0.550000 1.000000 0.765886\n0.600000 1.000000 0.887848\n0.650000 1.000000 1.000000\n0.700000 1.000000 1.000000\n0.750000 1.000000 1.000000\n0.800000 1.000000 1.000000\n0.063200 0.025000 0.025000\n0.113200 0.075000 0.146962\n0.163200 0.125000 0.268924\n0.213200 0.175000 0.390886\n0.263200 0.225000 0.512848\n0.313200 0.275000 0.634810\n0.363200 0.325000 0.756771\n0.413200 0.375000 0.878733\n0.463200 0.425000 1.000000\n0.088200 0.088376 0.050000\n0.138200 0.138376 0.171962\n0.188200 0.188376 0.293924\n0.238200 0.238376 0.415886\n0.288200 0.288376 0.537848\n0.338200 0.338376 0.659810\n0.388200 0.388376 0.781771\n0.438200 0.438376 0.903733\n0.488200 0.488376 1.000000\n0.113200 0.151753 0.075000\n0.163200 0.201753 0.196962\n0.213200 0.251753 0.318924\n0.263200 0.301753 0.440886\n0.313200 0.351753 0.562848\n0.363200 0.401753 0.684810\n0.413200 0.451753 0.806771\n0.463200 0.501753 0.928733\n0.513200 0.551753 1.000000\n0.138200 0.215129 0.100000\n0.188200 0.265129 0.221962\n0.238200 0.315129 0.343924\n0.288200 0.365129 0.465886\n0.338200 0.415129 0.587848\n0.388200 0.465129 0.709810\n0.438200 0.515129 0.831771\n0.488200 0.565129 0.953733\n0.538200 0.615129 1.000000\n0.163200 0.278506 0.125000\n0.213200 0.328506 0.246962\n0.263200 0.378506 0.368924\n0.313200 0.428506 0.490886\n0.363200 0.478506 0.612848\n0.413200 0.528506 0.734810\n0.463200 0.578506 0.856771\n0.513200 0.628506 0.978733\n0.563200 0.678506 1.000000\n0.188200 0.341882 0.150000\n0.238200 0.391882 0.271962\n0.288200 0.441882 0.393924\n0.338200 0.491882 0.515886\n0.388200 0.541882 0.637848\n0.438200 0.591882 0.759810\n0.488200 0.641882 0.881771\n0.538200 0.691882 1.000000\n0.588200 0.741882 1.000000\n0.213200 0.405259 0.175000\n0.263200 0.455259 0.296962\n0.313200 0.505259 0.418924\n0.363200 0.555259 0.540886\n0.413200 0.605259 0.662848\n0.463200 0.655259 0.784810\n0.513200 0.705259 0.906771\n0.563200 0.755259 1.000000\n0.613200 0.805259 1.000000\n0.238200 0.468635 0.200000\n0.288200 0.518635 0.321962\n0.338200 0.568635 0.443924\n0.388200 0.618635 0.565886\n0.438200 0.668635 0.687848\n0.488200 0.718635 0.809810\n0.538200 0.768635 0.931771\n0.588200 0.818635 1.000000\n0.638200 0.868635 1.000000\n0.263200 0.532012 0.225000\n0.313200 0.582012 0.346962\n0.363200 0.632012 0.468924\n0.413200 0.682012 0.590886\n0.463200 0.732012 0.712848\n0.513200 0.782012 0.834810\n0.563200 0.832012 0.956771\n0.613200 0.882012 1.000000\n0.663200 0.932012 1.000000\n0.288200 0.595388 0.250000\n0.338200 0.645388 0.371962\n0.388200 0.695388 0.493924\n0.438200 0.745388 0.615886\n0.488200 0.795388 0.737848\n0.538200 0.845388 0.859810\n0.588200 0.895388 0.981771\n0.638200 0.945388 1.000000\n0.688200 0.995388 1.000000\n0.313200 0.658765 0.275000\n0.363200 0.708765 0.396962\n0.413200 0.758765 0.518924\n0.463200 0.808765 0.640886\n0.513200 0.858765 0.762848\n0.563200 0.908765 0.884810\n0.613200 0.958765 1.000000\n0.663200 1.000000 1.000000\n0.713200 1.000000 1.000000\n0.338200 0.722141 0.300000\n0.388200 0.772141 0.421962\n0.438200 0.822141 0.543924\n0.488200 0.872141 0.665886\n0.538200 0.922141 0.787848\n0.588200 0.972141 0.909810\n0.638200 1.000000 1.000000\n0.688200 1.000000 1.000000\n0.738200 1.000000 1.000000\n0.363200 0.785518 0.325000\n0.413200 0.835518 0.446962\n0.463200 0.885518 0.568924\n0.513200 0.935518 0.690886\n0.563200 0.985518 0.812848\n0.613200 1.000000 0.934810\n0.663200 1.000000 1.000000\n0.713200 1.000000 1.000000\n0.763200 1.000000 1.000000\n0.388200 0.848894 0.350000\n0.438200 0.898894 0.471962\n0.488200 0.948894 0.593924\n0.538200 0.998894 0.715886\n0.588200 1.000000 0.837848\n0.638200 1.000000 0.959810\n0.688200 1.000000 1.000000\n0.738200 1.000000 1.000000\n0.788200 1.000000 1.000000\n0.413200 0.912270 0.375000\n0.463200 0.962270 0.496962\n0.513200 1.000000 0.618924\n0.563200 1.000000 0.740886\n0.613200 1.000000 0.862848\n0.663200 1.000000 0.984810\n0.713200 1.000000 1.000000\n0.763200 1.000000 1.000000\n0.813200 1.000000 1.000000\n0.438200 0.975647 0.400000\n0.488200 1.000000 0.521962\n0.538200 1.000000 0.643924\n0.588200 1.000000 0.765886\n0.638200 1.000000 0.887848\n0.688200 1.000000 1.000000\n0.738200 1.000000 1.000000\n0.788200 1.000000 1.000000\n0.838200 1.000000 1.000000\n0.463200 1.000000 0.425000\n0.513200 1.000000 0.546962\n0.563200 1.000000 0.668924\n0.613200 1.000000 0.790886\n0.663200 1.000000 0.912848\n0.713200 1.000000 1.000000\n0.763200 1.000000 1.000000\n0.813200 1.000000 1.000000\n0.863200 1.000000 1.000000\n0.126401 0.050000 0.050000\n0.176401 0.100000 0.171962\n0.226401 0.150000 0.293924\n0.276401 0.200000 0.415886\n0.326401 0.250000 0.537848\n0.376401 0.300000 0.659810\n0.426401 0.350000 0.781771\n0.476401 0.400000 0.903733\n0.526401 0.450000 1.000000\n0.151401 0.113376 0.075000\n0.201401 0.163376 0.196962\n0.251401 0.213376 0.318924\n0.301401 0.263376 0.440886\n0.351401 0.313376 0.562848\n0.401401 0.363376 0.684810\n0.451401 0.413376 0.806771\n0.501401 0.463376 0.928733\n0.551401 0.513376 1.000000\n0.176401 0.176753 0.100000\n0.226401 0.226753 0.221962\n0.276401 0.276753 0.343924\n0.326401 0.326753 0.465886\n0.376401 0.376753 0.587848\n0.426401 0.426753 0.709810\n0.476401 0.476753 0.831771\n0.526401 0.526753 0.953733\n0.576401 0.576753 1.000000\n0.201401 0.240129 0.125000\n0.251401 0.290129 0.246962\n0.301401 0.340129 0.368924\n0.351401 0.390129 0.490886\n0.401401 0.440129 0.612848\n0.451401 0.490129 0.734810\n0.501401 0.540129 0.856771\n0.551401 0.590129 0.978733\n0.601401 0.640129 1.000000\n0.226401 0.303506 0.150000\n0.276401 0.353506 0.271962\n0.326401 0.403506 0.393924\n0.376401 0.453506 0.515886\n0.426401 0.503506 0.637848\n0.476401 0.553506 0.759810\n0.526401 0.603506 0.881771\n0.576401 0.653506 1.000000\n0.626401 0.703506 1.000000\n0.251401 0.366882 0.175000\n0.301401 0.416882 0.296962\n0.351401 0.466882 0.418924\n0.401401 0.516882 0.540886\n0.451401 0.566882 0.662848\n0.501401 0.616882 0.784810\n0.551401 0.666882 0.906771\n0.601401 0.716882 1.000000\n0.651401 0.766882 1.000000\n0.276401 0.430259 0.200000\n0.326401 0.480259 0.321962\n0.376401 0.530259 0.443924\n0.426401 0.580259 0.565886\n0.476401 0.630259 0.687848\n0.526401 0.680259 0.809810\n0.576401 0.730259 0.931771\n0.626401 0.780259 1.000000\n0.676401 0.830259 1.000000\n0.301401 0.493635 0.225000\n0.351401 0.543635 0.346962\n0.401401 0.593635 0.468924\n0.451401 0.643635 0.590886\n0.501401 0.693635 0.712848\n0.551401 0.743635 0.834810\n0.601401 0.793635 0.956771\n0.651401 0.843635 1.000000\n0.701401 0.893635 1.000000\n0.326401 0.557012 0.250000\n0.376401 0.607012 0.371962\n0.426401 0.657012 0.493924\n0.476401 0.707012 0.615886\n0.526401 0.757012 0.737848\n0.576401 0.807012 0.859810\n0.626401 0.857012 0.981771\n0.676401 0.907012 1.000000\n0.726401 0.957012 1.000000\n0.351401 0.620388 0.275000\n0.401401 0.670388 0.396962\n0.451401 0.720388 0.518924\n0.501401 0.770388 0.640886\n0.551401 0.820388 0.762848\n0.601401 0.870388 0.884810\n0.651401 0.920388 1.000000\n0.701401 0.970388 1.000000\n0.751401 1.000000 1.000000\n0.376401 0.683765 0.300000\n0.426401 0.733765 0.421962\n0.476401 0.783765 0.543924\n0.526401 0.833765 0.665886\n0.576401 0.883765 0.787848\n0.626401 0.933765 0.909810\n0.676401 0.983765 1.000000\n0.726401 1.000000 1.000000\n0.776401 1.000000 1.000000\n0.401401 0.747141 0.325000\n0.451401 0.797141 0.446962\n0.501401 0.847141 0.568924\n0.551401 0.897141 0.690886\n0.601401 0.947141 0.812848\n0.651401 0.997141 0.934810\n0.701401 1.000000 1.000000\n0.751401 1.000000 1.000000\n0.801401 1.000000 1.000000\n0.426401 0.810518 0.350000\n0.476401 0.860518 0.471962\n0.526401 0.910518 0.593924\n0.576401 0.960518 0.715886\n0.626401 1.000000 0.837848\n0.676401 1.000000 0.959810\n0.726401 1.000000 1.000000\n0.776401 1.000000 1.000000\n0.826401 1.000000 1.000000\n0.451401 0.873894 0.375000\n0.501401 0.923894 0.496962\n0.551401 0.973894 0.618924\n0.601401 1.000000 0.740886\n0.651401 1.000000 0.862848\n0.701401 1.000000 0.984810\n0.751401 1.000000 1.000000\n0.801401 1.000000 1.000000\n0.851401 1.000000 1.000000\n0.476401 0.937270 0.400000\n0.526401 0.987270 0.521962\n0.576401 1.000000 0.643924\n0.626401 1.000000 0.765886\n0.676401 1.000000 0.887848\n0.726401 1.000000 1.000000\n0.776401 1.000000 1.000000\n0.826401 1.000000 1.000000\n0.876401 1.000000 1.000000\n0.501401 1.000000 0.425000\n0.551401 1.000000 0.546962\n0.601401 1.000000 0.668924\n0.651401 1.000000 0.790886\n0.701401 1.000000 0.912848\n0.751401 1.000000 1.000000\n0.801401 1.000000 1.000000\n0.851401 1.000000 1.000000\n0.901401 1.000000 1.000000\n0.526401 1.000000 0.450000\n0.576401 1.000000 0.571962\n0.626401 1.000000 0.693924\n0.676401 1.000000 0.815886\n0.726401 1.000000 0.937848\n0.776401 1.000000 1.000000\n0.826401 1.000000 1.000000\n0.876401 1.000000 1.000000\n0.926401 1.000000 1.000000\n0.189601 0.075000 0.075000\n0.239601 0.125000 0.196962\n0.289601 0.175000 0.318924\n0.339601 0.225000 0.440886\n0.389601 0.275000 0.562848\n0.439601 0.325000 0.684810\n0.489601 0.375000 0.806771\n0.539601 0.425000 0.928733\n0.589601 0.475000 1.000000\n0.214601 0.138376 0.100000\n0.264601 0.188376 0.221962\n0.314601 0.238376 0.343924\n0.364601 0.288376 0.465886\n0.414601 0.338376 0.587848\n0.464601 0.388376 0.709810\n0.514601 0.438376 0.831771\n0.564601 0.488376 0.953733\n0.614601 0.538376 1.000000\n0.239601 0.201753 0.125000\n0.289601 0.251753 0.246962\n0.339601 0.301753 0.368924\n0.389601 0.351753 0.490886\n0.439601 0.401753 0.612848\n0.489601 0.451753 0.734810\n0.539601 0.501753 0.856771\n0.589601 0.551753 0.978733\n0.639601 0.601753 1.000000\n0.264601 0.265129 0.150000\n0.314601 0.315129 0.271962\n0.364601 0.365129 0.393924\n0.414601 0.415129 0.515886\n0.464601 0.465129 0.637848\n0.514601 0.515129 0.759810\n0.564601 0.565129 0.881771\n0.614601 0.615129 1.000000\n0.664601 0.665129 1.000000\n0.289601 0.328506 0.175000\n0.339601 0.378506 0.296962\n0.389601 0.428506 0.418924\n0.439601 0.478506 0.540886\n0.489601 0.528506 0.662848\n0.539601 0.578506 0.784810\n0.589601 0.628506 0.906771\n0.639601 0.678506 1.000000\n0.689601 0.728506 1.000000\n0.314601 0.391882 0.200000\n0.364601 0.441882 0.321962\n0.414601 0.491882 0.443924\n0.464601 0.541882 0.565886\n0.514601 0.591882 0.687848\n0.564601 0.641882 0.809810\n0.614601 0.691882 0.931771\n0.664601 0.741882 1.000000\n0.714601 0.791882 1.000000\n0.339601 0.455259 0.225000\n0.389601 0.505259 0.346962\n0.439601 0.555259 0.468924\n0.489601 0.605259 0.590886\n0.539601 0.655259 0.712848\n0.589601 0.705259 0.834810\n0.639601 0.755259 0.956771\n0.689601 0.805259 1.000000\n0.739601 0.855259 1.000000\n0.364601 0.518635 0.250000\n0.414601 0.568635 0.371962\n0.464601 0.618635 0.493924\n0.514601 0.668635 0.615886\n0.564601 0.718635 0.737848\n0.614601 0.768635 0.859810\n0.664601 0.818635 0.981771\n0.714601 0.868635 1.000000\n0.764601 0.918635 1.000000\n0.389601 0.582012 0.275000\n0.439601 0.632012 0.396962\n0.489601 0.682012 0.518924\n0.539601 0.732012 0.640886\n0.589601 0.782012 0.762848\n0.639601 0.832012 0.884810\n0.689601 0.882012 1.000000\n0.739601 0.932012 1.000000\n0.789601 0.982012 1.000000\n0.414601 0.645388 0.300000\n0.464601 0.695388 0.421962\n0.514601 0.745388 0.543924\n0.564601 0.795388 0.665886\n0.614601 0.845388 0.787848\n0.664601 0.895388 0.909810\n0.714601 0.945388 1.000000\n0.764601 0.995388 1.000000\n0.814601 1.000000 1.000000\n0.439601 0.708765 0.325000\n0.489601 0.758765 0.446962\n0.539601 0.808765 0.568924\n0.589601 0.858765 0.690886\n0.639601 0.908765 0.812848\n0.689601 0.958765 0.934810\n0.739601 1.000000 1.000000\n0.789601 1.000000 1.000000\n0.839601 1.000000 1.000000\n0.464601 0.772141 0.350000\n0.514601 0.822141 0.471962\n0.564601 0.872141 0.593924\n0.614601 0.922141 0.715886\n0.664601 0.972141 0.837848\n0.714601 1.000000 0.959810\n0.764601 1.000000 1.000000\n0.814601 1.000000 1.000000\n0.864601 1.000000 1.000000\n0.489601 0.835518 0.375000\n0.539601 0.885518 0.496962\n0.589601 0.935518 0.618924\n0.639601 0.985518 0.740886\n0.689601 1.000000 0.862848\n0.739601 1.000000 0.984810\n0.789601 1.000000 1.000000\n0.839601 1.000000 1.000000\n0.889601 1.000000 1.000000\n0.514601 0.898894 0.400000\n0.564601 0.948894 0.521962\n0.614601 0.998894 0.643924\n0.664601 1.000000 0.765886\n0.714601 1.000000 0.887848\n0.764601 1.000000 1.000000\n0.814601 1.000000 1.000000\n0.864601 1.000000 1.000000\n0.914601 1.000000 1.000000\n0.539601 0.962270 0.425000\n0.589601 1.000000 0.546962\n0.639601 1.000000 0.668924\n0.689601 1.000000 0.790886\n0.739601 1.000000 0.912848\n0.789601 1.000000 1.000000\n0.839601 1.000000 1.000000\n0.889601 1.000000 1.000000\n0.939601 1.000000 1.000000\n0.564601 1.000000 0.450000\n0.614601 1.000000 0.571962\n0.664601 1.000000 0.693924\n0.714601 1.000000 0.815886\n0.764601 1.000000 0.937848\n0.814601 1.000000 1.000000\n0.864601 1.000000 1.000000\n0.914601 1.000000 1.000000\n0.964601 1.000000 1.000000\n0.589601 1.000000 0.475000\n0.639601 1.000000 0.596962\n0.689601 1.000000 0.718924\n0.739601 1.000000 0.840886\n0.789601 1.000000 0.962848\n0.839601 1.000000 1.000000\n0.889601 1.000000 1.000000\n0.939601 1.000000 1.000000\n0.989601 1.000000 1.000000\n0.252801 0.100000 0.100000\n0.302801 0.150000 0.221962\n0.352801 0.200000 0.343924\n0.402801 0.250000 0.465886\n0.452801 0.300000 0.587848\n0.502801 0.350000 0.709810\n0.552801 0.400000 0.831771\n0.602801 0.450000 0.953733\n0.652801 0.500000 1.000000\n0.277801 0.163376 0.125000\n0.327801 0.213376 0.246962\n0.377801 0.263376 0.368924\n0.427801 0.313376 0.490886\n0.477801 0.363376 0.612848\n0.527801 0.413376 0.734810\n0.577801 0.463376 0.856771\n0.627801 0.513376 0.978733\n0.677801 0.563376 1.000000\n0.302801 0.226753 0.150000\n0.352801 0.276753 0.271962\n0.402801 0.326753 0.393924\n0.452801 0.376753 0.515886\n0.502801 0.426753 0.637848\n0.552801 0.476753 0.759810\n0.602801 0.526753 0.881771\n0.652801 0.576753 1.000000\n0.702801 0.626753 1.000000\n0.327801 0.290129 0.175000\n0.377801 0.340129 0.296962\n0.427801 0.390129 0.418924\n0.477801 0.440129 0.540886\n0.527801 0.490129 0.662848\n0.577801 0.540129 0.784810\n0.627801 0.590129 0.906771\n0.677801 0.640129 1.000000\n0.727801 0.690129 1.000000\n0.352801 0.353506 0.200000\n0.402801 0.403506 0.321962\n0.452801 0.453506 0.443924\n0.502801 0.503506 0.565886\n0.552801 0.553506 0.687848\n0.602801 0.603506 0.809810\n0.652801 0.653506 0.931771\n0.702801 0.703506 1.000000\n0.752801 0.753506 1.000000\n0.377801 0.416882 0.225000\n0.427801 0.466882 0.346962\n0.477801 0.516882 0.468924\n0.527801 0.566882 0.590886\n0.577801 0.616882 0.712848\n0.627801 0.666882 0.834810\n0.677801 0.716882 0.956771\n0.727801 0.766882 1.000000\n0.777801 0.816882 1.000000\n0.402801 0.480259 0.250000\n0.452801 0.530259 0.371962\n0.502801 0.580259 0.493924\n0.552801 0.630259 0.615886\n0.602801 0.680259 0.737848\n0.652801 0.730259 0.859810\n0.702801 0.780259 0.981771\n0.752801 0.830259 1.000000\n0.802801 0.880259 1.000000\n0.427801 0.543635 0.275000\n0.477801 0.593635 0.396962\n0.527801 0.643635 0.518924\n0.577801 0.693635 0.640886\n0.627801 0.743635 0.762848\n0.677801 0.793635 0.884810\n0.727801 0.843635 1.000000\n0.777801 0.893635 1.000000\n0.827801 0.943635 1.000000\n0.452801 0.607012 0.300000\n0.502801 0.657012 0.421962\n0.552801 0.707012 0.543924\n0.602801 0.757012 0.665886\n0.652801 0.807012 0.787848\n0.702801 0.857012 0.909810\n0.752801 0.907012 1.000000\n0.802801 0.957012 1.000000\n0.852801 1.000000 1.000000\n0.477801 0.670388 0.325000\n0.527801 0.720388 0.446962\n0.577801 0.770388 0.568924\n0.627801 0.820388 0.690886\n0.677801 0.870388 0.812848\n0.727801 0.920388 0.934810\n0.777801 0.970388 1.000000\n0.827801 1.000000 1.000000\n0.877801 1.000000 1.000000\n0.502801 0.733765 0.350000\n0.552801 0.783765 0.471962\n0.602801 0.833765 0.593924\n0.652801 0.883765 0.715886\n0.702801 0.933765 0.837848\n0.752801 0.983765 0.959810\n0.802801 1.000000 1.000000\n0.852801 1.000000 1.000000\n0.902801 1.000000 1.000000\n0.527801 0.797141 0.375000\n0.577801 0.847141 0.496962\n0.627801 0.897141 0.618924\n0.677801 0.947141 0.740886\n0.727801 0.997141 0.862848\n0.777801 1.000000 0.984810\n0.827801 1.000000 1.000000\n0.877801 1.000000 1.000000\n0.927801 1.000000 1.000000\n0.552801 0.860518 0.400000\n0.602801 0.910518 0.521962\n0.652801 0.960518 0.643924\n0.702801 1.000000 0.765886\n0.752801 1.000000 0.887848\n0.802801 1.000000 1.000000\n0.852801 1.000000 1.000000\n0.902801 1.000000 1.000000\n0.952801 1.000000 1.000000\n0.577801 0.923894 0.425000\n0.627801 0.973894 0.546962\n0.677801 1.000000 0.668924\n0.727801 1.000000 0.790886\n0.777801 1.000000 0.912848\n0.827801 1.000000 1.000000\n0.877801 1.000000 1.000000\n0.927801 1.000000 1.000000\n0.977801 1.000000 1.000000\n0.602801 0.987270 0.450000\n0.652801 1.000000 0.571962\n0.702801 1.000000 0.693924\n0.752801 1.000000 0.815886\n0.802801 1.000000 0.937848\n0.852801 1.000000 1.000000\n0.902801 1.000000 1.000000\n0.952801 1.000000 1.000000\n1.000000 1.000000 1.000000\n0.627801 1.000000 0.475000\n0.677801 1.000000 0.596962\n0.727801 1.000000 0.718924\n0.777801 1.000000 0.840886\n0.827801 1.000000 0.962848\n0.877801 1.000000 1.000000\n0.927801 1.000000 1.000000\n0.977801 1.000000 1.000000\n1.000000 1.000000 1.000000\n0.652801 1.000000 0.500000\n0.702801 1.000000 0.621962\n0.752801 1.000000 0.743924\n0.802801 1.000000 0.865886\n0.852801 1.000000 0.987848\n0.902801 1.000000 1.000000\n0.952801 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n0.316002 0.125000 0.125000\n0.366002 0.175000 0.246962\n0.416002 0.225000 0.368924\n0.466002 0.275000 0.490886\n0.516002 0.325000 0.612848\n0.566002 0.375000 0.734810\n0.616002 0.425000 0.856771\n0.666002 0.475000 0.978733\n0.716002 0.525000 1.000000\n0.341002 0.188376 0.150000\n0.391002 0.238376 0.271962\n0.441002 0.288376 0.393924\n0.491002 0.338376 0.515886\n0.541002 0.388376 0.637848\n0.591002 0.438376 0.759810\n0.641002 0.488376 0.881771\n0.691002 0.538376 1.000000\n0.741002 0.588376 1.000000\n0.366002 0.251753 0.175000\n0.416002 0.301753 0.296962\n0.466002 0.351753 0.418924\n0.516002 0.401753 0.540886\n0.566002 0.451753 0.662848\n0.616002 0.501753 0.784810\n0.666002 0.551753 0.906771\n0.716002 0.601753 1.000000\n0.766002 0.651753 1.000000\n0.391002 0.315129 0.200000\n0.441002 0.365129 0.321962\n0.491002 0.415129 0.443924\n0.541002 0.465129 0.565886\n0.591002 0.515129 0.687848\n0.641002 0.565129 0.809810\n0.691002 0.615129 0.931771\n0.741002 0.665129 1.000000\n0.791002 0.715129 1.000000\n0.416002 0.378506 0.225000\n0.466002 0.428506 0.346962\n0.516002 0.478506 0.468924\n0.566002 0.528506 0.590886\n0.616002 0.578506 0.712848\n0.666002 0.628506 0.834810\n0.716002 0.678506 0.956771\n0.766002 0.728506 1.000000\n0.816002 0.778506 1.000000\n0.441002 0.441882 0.250000\n0.491002 0.491882 0.371962\n0.541002 0.541882 0.493924\n0.591002 0.591882 0.615886\n0.641002 0.641882 0.737848\n0.691002 0.691882 0.859810\n0.741002 0.741882 0.981771\n0.791002 0.791882 1.000000\n0.841002 0.841882 1.000000\n0.466002 0.505259 0.275000\n0.516002 0.555259 0.396962\n0.566002 0.605259 0.518924\n0.616002 0.655259 0.640886\n0.666002 0.705259 0.762848\n0.716002 0.755259 0.884810\n0.766002 0.805259 1.000000\n0.816002 0.855259 1.000000\n0.866002 0.905259 1.000000\n0.491002 0.568635 0.300000\n0.541002 0.618635 0.421962\n0.591002 0.668635 0.543924\n0.641002 0.718635 0.665886\n0.691002 0.768635 0.787848\n0.741002 0.818635 0.909810\n0.791002 0.868635 1.000000\n0.841002 0.918635 1.000000\n0.891002 0.968635 1.000000\n0.516002 0.632012 0.325000\n0.566002 0.682012 0.446962\n0.616002 0.732012 0.568924\n0.666002 0.782012 0.690886\n0.716002 0.832012 0.812848\n0.766002 0.882012 0.934810\n0.816002 0.932012 1.000000\n0.866002 0.982012 1.000000\n0.916002 1.000000 1.000000\n0.541002 0.695388 0.350000\n0.591002 0.745388 0.471962\n0.641002 0.795388 0.593924\n0.691002 0.845388 0.715886\n0.741002 0.895388 0.837848\n0.791002 0.945388 0.959810\n0.841002 0.995388 1.000000\n0.891002 1.000000 1.000000\n0.941002 1.000000 1.000000\n0.566002 0.758765 0.375000\n0.616002 0.808765 0.496962\n0.666002 0.858765 0.618924\n0.716002 0.908765 0.740886\n0.766002 0.958765 0.862848\n0.816002 1.000000 0.984810\n0.866002 1.000000 1.000000\n0.916002 1.000000 1.000000\n0.966002 1.000000 1.000000\n0.591002 0.822141 0.400000\n0.641002 0.872141 0.521962\n0.691002 0.922141 0.643924\n0.741002 0.972141 0.765886\n0.791002 1.000000 0.887848\n0.841002 1.000000 1.000000\n0.891002 1.000000 1.000000\n0.941002 1.000000 1.000000\n0.991002 1.000000 1.000000\n0.616002 0.885518 0.425000\n0.666002 0.935518 0.546962\n0.716002 0.985518 0.668924\n0.766002 1.000000 0.790886\n0.816002 1.000000 0.912848\n0.866002 1.000000 1.000000\n0.916002 1.000000 1.000000\n0.966002 1.000000 1.000000\n1.000000 1.000000 1.000000\n0.641002 0.948894 0.450000\n0.691002 0.998894 0.571962\n0.741002 1.000000 0.693924\n0.791002 1.000000 0.815886\n0.841002 1.000000 0.937848\n0.891002 1.000000 1.000000\n0.941002 1.000000 1.000000\n0.991002 1.000000 1.000000\n1.000000 1.000000 1.000000\n0.666002 1.000000 0.475000\n0.716002 1.000000 0.596962\n0.766002 1.000000 0.718924\n0.816002 1.000000 0.840886\n0.866002 1.000000 0.962848\n0.916002 1.000000 1.000000\n0.966002 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n0.691002 1.000000 0.500000\n0.741002 1.000000 0.621962\n0.791002 1.000000 0.743924\n0.841002 1.000000 0.865886\n0.891002 1.000000 0.987848\n0.941002 1.000000 1.000000\n0.991002 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n0.716002 1.000000 0.525000\n0.766002 1.000000 0.646962\n0.816002 1.000000 0.768924\n0.866002 1.000000 0.890886\n0.916002 1.000000 1.000000\n0.966002 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n0.379202 0.150000 0.150000\n0.429202 0.200000 0.271962\n0.479202 0.250000 0.393924\n0.529202 0.300000 0.515886\n0.579202 0.350000 0.637848\n0.629202 0.400000 0.759810\n0.679202 0.450000 0.881771\n0.729202 0.500000 1.000000\n0.779202 0.550000 1.000000\n0.404202 0.213376 0.175000\n0.454202 0.263376 0.296962\n0.504202 0.313376 0.418924\n0.554202 0.363376 0.540886\n0.604202 0.413376 0.662848\n0.654202 0.463376 0.784810\n0.704202 0.513376 0.906771\n0.754202 0.563376 1.000000\n0.804202 0.613376 1.000000\n0.429202 0.276753 0.200000\n0.479202 0.326753 0.321962\n0.529202 0.376753 0.443924\n0.579202 0.426753 0.565886\n0.629202 0.476753 0.687848\n0.679202 0.526753 0.809810\n0.729202 0.576753 0.931771\n0.779202 0.626753 1.000000\n0.829202 0.676753 1.000000\n0.454202 0.340129 0.225000\n0.504202 0.390129 0.346962\n0.554202 0.440129 0.468924\n0.604202 0.490129 0.590886\n0.654202 0.540129 0.712848\n0.704202 0.590129 0.834810\n0.754202 0.640129 0.956771\n0.804202 0.690129 1.000000\n0.854202 0.740129 1.000000\n0.479202 0.403506 0.250000\n0.529202 0.453506 0.371962\n0.579202 0.503506 0.493924\n0.629202 0.553506 0.615886\n0.679202 0.603506 0.737848\n0.729202 0.653506 0.859810\n0.779202 0.703506 0.981771\n0.829202 0.753506 1.000000\n0.879202 0.803506 1.000000\n0.504202 0.466882 0.275000\n0.554202 0.516882 0.396962\n0.604202 0.566882 0.518924\n0.654202 0.616882 0.640886\n0.704202 0.666882 0.762848\n0.754202 0.716882 0.884810\n0.804202 0.766882 1.000000\n0.854202 0.816882 1.000000\n0.904202 0.866882 1.000000\n0.529202 0.530259 0.300000\n0.579202 0.580259 0.421962\n0.629202 0.630259 0.543924\n0.679202 0.680259 0.665886\n0.729202 0.730259 0.787848\n0.779202 0.780259 0.909810\n0.829202 0.830259 1.000000\n0.879202 0.880259 1.000000\n0.929202 0.930259 1.000000\n0.554202 0.593635 0.325000\n0.604202 0.643635 0.446962\n0.654202 0.693635 0.568924\n0.704202 0.743635 0.690886\n0.754202 0.793635 0.812848\n0.804202 0.843635 0.934810\n0.854202 0.893635 1.000000\n0.904202 0.943635 1.000000\n0.954202 0.993635 1.000000\n0.579202 0.657012 0.350000\n0.629202 0.707012 0.471962\n0.679202 0.757012 0.593924\n0.729202 0.807012 0.715886\n0.779202 0.857012 0.837848\n0.829202 0.907012 0.959810\n0.879202 0.957012 1.000000\n0.929202 1.000000 1.000000\n0.979202 1.000000 1.000000\n0.604202 0.720388 0.375000\n0.654202 0.770388 0.496962\n0.704202 0.820388 0.618924\n0.754202 0.870388 0.740886\n0.804202 0.920388 0.862848\n0.854202 0.970388 0.984810\n0.904202 1.000000 1.000000\n0.954202 1.000000 1.000000\n1.000000 1.000000 1.000000\n0.629202 0.783765 0.400000\n0.679202 0.833765 0.521962\n0.729202 0.883765 0.643924\n0.779202 0.933765 0.765886\n0.829202 0.983765 0.887848\n0.879202 1.000000 1.000000\n0.929202 1.000000 1.000000\n0.979202 1.000000 1.000000\n1.000000 1.000000 1.000000\n0.654202 0.847141 0.425000\n0.704202 0.897141 0.546962\n0.754202 0.947141 0.668924\n0.804202 0.997141 0.790886\n0.854202 1.000000 0.912848\n0.904202 1.000000 1.000000\n0.954202 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n0.679202 0.910518 0.450000\n0.729202 0.960518 0.571962\n0.779202 1.000000 0.693924\n0.829202 1.000000 0.815886\n0.879202 1.000000 0.937848\n0.929202 1.000000 1.000000\n0.979202 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n0.704202 0.973894 0.475000\n0.754202 1.000000 0.596962\n0.804202 1.000000 0.718924\n0.854202 1.000000 0.840886\n0.904202 1.000000 0.962848\n0.954202 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n0.729202 1.000000 0.500000\n0.779202 1.000000 0.621962\n0.829202 1.000000 0.743924\n0.879202 1.000000 0.865886\n0.929202 1.000000 0.987848\n0.979202 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n0.754202 1.000000 0.525000\n0.804202 1.000000 0.646962\n0.854202 1.000000 0.768924\n0.904202 1.000000 0.890886\n0.954202 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n0.779202 1.000000 0.550000\n0.829202 1.000000 0.671962\n0.879202 1.000000 0.793924\n0.929202 1.000000 0.915886\n0.979202 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n0.442402 0.175000 0.175000\n0.492402 0.225000 0.296962\n0.542402 0.275000 0.418924\n0.592402 0.325000 0.540886\n0.642402 0.375000 0.662848\n0.692402 0.425000 0.784810\n0.742402 0.475000 0.906771\n0.792402 0.525000 1.000000\n0.842402 0.575000 1.000000\n0.467402 0.238376 0.200000\n0.517402 0.288376 0.321962\n0.567402 0.338376 0.443924\n0.617402 0.388376 0.565886\n0.667402 0.438376 0.687848\n0.717402 0.488376 0.809810\n0.767402 0.538376 0.931771\n0.817402 0.588376 1.000000\n0.867402 0.638376 1.000000\n0.492402 0.301753 0.225000\n0.542402 0.351753 0.346962\n0.592402 0.401753 0.468924\n0.642402 0.451753 0.590886\n0.692402 0.501753 0.712848\n0.742402 0.551753 0.834810\n0.792402 0.601753 0.956771\n0.842402 0.651753 1.000000\n0.892402 0.701753 1.000000\n0.517402 0.365129 0.250000\n0.567402 0.415129 0.371962\n0.617402 0.465129 0.493924\n0.667402 0.515129 0.615886\n0.717402 0.565129 0.737848\n0.767402 0.615129 0.859810\n0.817402 0.665129 0.981771\n0.867402 0.715129 1.000000\n0.917402 0.765129 1.000000\n0.542402 0.428506 0.275000\n0.592402 0.478506 0.396962\n0.642402 0.528506 0.518924\n0.692402 0.578506 0.640886\n0.742402 0.628506 0.762848\n0.792402 0.678506 0.884810\n0.842402 0.728506 1.000000\n0.892402 0.778506 1.000000\n0.942402 0.828506 1.000000\n0.567402 0.491882 0.300000\n0.617402 0.541882 0.421962\n0.667402 0.591882 0.543924\n0.717402 0.641882 0.665886\n0.767402 0.691882 0.787848\n0.817402 0.741882 0.909810\n0.867402 0.791882 1.000000\n0.917402 0.841882 1.000000\n0.967402 0.891882 1.000000\n0.592402 0.555259 0.325000\n0.642402 0.605259 0.446962\n0.692402 0.655259 0.568924\n0.742402 0.705259 0.690886\n0.792402 0.755259 0.812848\n0.842402 0.805259 0.934810\n0.892402 0.855259 1.000000\n0.942402 0.905259 1.000000\n0.992402 0.955259 1.000000\n0.617402 0.618635 0.350000\n0.667402 0.668635 0.471962\n0.717402 0.718635 0.593924\n0.767402 0.768635 0.715886\n0.817402 0.818635 0.837848\n0.867402 0.868635 0.959810\n0.917402 0.918635 1.000000\n0.967402 0.968635 1.000000\n1.000000 1.000000 1.000000\n0.642402 0.682012 0.375000\n0.692402 0.732012 0.496962\n0.742402 0.782012 0.618924\n0.792402 0.832012 0.740886\n0.842402 0.882012 0.862848\n0.892402 0.932012 0.984810\n0.942402 0.982012 1.000000\n0.992402 1.000000 1.000000\n1.000000 1.000000 1.000000\n0.667402 0.745388 0.400000\n0.717402 0.795388 0.521962\n0.767402 0.845388 0.643924\n0.817402 0.895388 0.765886\n0.867402 0.945388 0.887848\n0.917402 0.995388 1.000000\n0.967402 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n0.692402 0.808765 0.425000\n0.742402 0.858765 0.546962\n0.792402 0.908765 0.668924\n0.842402 0.958765 0.790886\n0.892402 1.000000 0.912848\n0.942402 1.000000 1.000000\n0.992402 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n0.717402 0.872141 0.450000\n0.767402 0.922141 0.571962\n0.817402 0.972141 0.693924\n0.867402 1.000000 0.815886\n0.917402 1.000000 0.937848\n0.967402 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n0.742402 0.935518 0.475000\n0.792402 0.985518 0.596962\n0.842402 1.000000 0.718924\n0.892402 1.000000 0.840886\n0.942402 1.000000 0.962848\n0.992402 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n0.767402 0.998894 0.500000\n0.817402 1.000000 0.621962\n0.867402 1.000000 0.743924\n0.917402 1.000000 0.865886\n0.967402 1.000000 0.987848\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n0.792402 1.000000 0.525000\n0.842402 1.000000 0.646962\n0.892402 1.000000 0.768924\n0.942402 1.000000 0.890886\n0.992402 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n0.817402 1.000000 0.550000\n0.867402 1.000000 0.671962\n0.917402 1.000000 0.793924\n0.967402 1.000000 0.915886\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n0.842402 1.000000 0.575000\n0.892402 1.000000 0.696962\n0.942402 1.000000 0.818924\n0.992402 1.000000 0.940886\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n0.505602 0.200000 0.200000\n0.555602 0.250000 0.321962\n0.605602 0.300000 0.443924\n0.655602 0.350000 0.565886\n0.705602 0.400000 0.687848\n0.755602 0.450000 0.809810\n0.805602 0.500000 0.931771\n0.855602 0.550000 1.000000\n0.905602 0.600000 1.000000\n0.530602 0.263376 0.225000\n0.580602 0.313376 0.346962\n0.630602 0.363376 0.468924\n0.680602 0.413376 0.590886\n0.730602 0.463376 0.712848\n0.780602 0.513376 0.834810\n0.830602 0.563376 0.956771\n0.880602 0.613376 1.000000\n0.930602 0.663376 1.000000\n0.555602 0.326753 0.250000\n0.605602 0.376753 0.371962\n0.655602 0.426753 0.493924\n0.705602 0.476753 0.615886\n0.755602 0.526753 0.737848\n0.805602 0.576753 0.859810\n0.855602 0.626753 0.981771\n0.905602 0.676753 1.000000\n0.955602 0.726753 1.000000\n0.580602 0.390129 0.275000\n0.630602 0.440129 0.396962\n0.680602 0.490129 0.518924\n0.730602 0.540129 0.640886\n0.780602 0.590129 0.762848\n0.830602 0.640129 0.884810\n0.880602 0.690129 1.000000\n0.930602 0.740129 1.000000\n0.980602 0.790129 1.000000\n0.605602 0.453506 0.300000\n0.655602 0.503506 0.421962\n0.705602 0.553506 0.543924\n0.755602 0.603506 0.665886\n0.805602 0.653506 0.787848\n0.855602 0.703506 0.909810\n0.905602 0.753506 1.000000\n0.955602 0.803506 1.000000\n1.000000 0.853506 1.000000\n0.630602 0.516882 0.325000\n0.680602 0.566882 0.446962\n0.730602 0.616882 0.568924\n0.780602 0.666882 0.690886\n0.830602 0.716882 0.812848\n0.880602 0.766882 0.934810\n0.930602 0.816882 1.000000\n0.980602 0.866882 1.000000\n1.000000 0.916882 1.000000\n0.655602 0.580259 0.350000\n0.705602 0.630259 0.471962\n0.755602 0.680259 0.593924\n0.805602 0.730259 0.715886\n0.855602 0.780259 0.837848\n0.905602 0.830259 0.959810\n0.955602 0.880259 1.000000\n1.000000 0.930259 1.000000\n1.000000 0.980259 1.000000\n0.680602 0.643635 0.375000\n0.730602 0.693635 0.496962\n0.780602 0.743635 0.618924\n0.830602 0.793635 0.740886\n0.880602 0.843635 0.862848\n0.930602 0.893635 0.984810\n0.980602 0.943635 1.000000\n1.000000 0.993635 1.000000\n1.000000 1.000000 1.000000\n0.705602 0.707012 0.400000\n0.755602 0.757012 0.521962\n0.805602 0.807012 0.643924\n0.855602 0.857012 0.765886\n0.905602 0.907012 0.887848\n0.955602 0.957012 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n0.730602 0.770388 0.425000\n0.780602 0.820388 0.546962\n0.830602 0.870388 0.668924\n0.880602 0.920388 0.790886\n0.930602 0.970388 0.912848\n0.980602 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n0.755602 0.833765 0.450000\n0.805602 0.883765 0.571962\n0.855602 0.933765 0.693924\n0.905602 0.983765 0.815886\n0.955602 1.000000 0.937848\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n0.780602 0.897141 0.475000\n0.830602 0.947141 0.596962\n0.880602 0.997141 0.718924\n0.930602 1.000000 0.840886\n0.980602 1.000000 0.962848\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n0.805602 0.960518 0.500000\n0.855602 1.000000 0.621962\n0.905602 1.000000 0.743924\n0.955602 1.000000 0.865886\n1.000000 1.000000 0.987848\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n0.830602 1.000000 0.525000\n0.880602 1.000000 0.646962\n0.930602 1.000000 0.768924\n0.980602 1.000000 0.890886\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n0.855602 1.000000 0.550000\n0.905602 1.000000 0.671962\n0.955602 1.000000 0.793924\n1.000000 1.000000 0.915886\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n0.880602 1.000000 0.575000\n0.930602 1.000000 0.696962\n0.980602 1.000000 0.818924\n1.000000 1.000000 0.940886\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n0.905602 1.000000 0.600000\n0.955602 1.000000 0.721962\n1.000000 1.000000 0.843924\n1.000000 1.000000 0.965886\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n0.568803 0.225000 0.225000\n0.618803 0.275000 0.346962\n0.668803 0.325000 0.468924\n0.718803 0.375000 0.590886\n0.768803 0.425000 0.712848\n0.818803 0.475000 0.834810\n0.868803 0.525000 0.956771\n0.918803 0.575000 1.000000\n0.968803 0.625000 1.000000\n0.593803 0.288376 0.250000\n0.643803 0.338376 0.371962\n0.693803 0.388376 0.493924\n0.743803 0.438376 0.615886\n0.793803 0.488376 0.737848\n0.843803 0.538376 0.859810\n0.893803 0.588376 0.981771\n0.943803 0.638376 1.000000\n0.993803 0.688376 1.000000\n0.618803 0.351753 0.275000\n0.668803 0.401753 0.396962\n0.718803 0.451753 0.518924\n0.768803 0.501753 0.640886\n0.818803 0.551753 0.762848\n0.868803 0.601753 0.884810\n0.918803 0.651753 1.000000\n0.968803 0.701753 1.000000\n1.000000 0.751753 1.000000\n0.643803 0.415129 0.300000\n0.693803 0.465129 0.421962\n0.743803 0.515129 0.543924\n0.793803 0.565129 0.665886\n0.843803 0.615129 0.787848\n0.893803 0.665129 0.909810\n0.943803 0.715129 1.000000\n0.993803 0.765129 1.000000\n1.000000 0.815129 1.000000\n0.668803 0.478506 0.325000\n0.718803 0.528506 0.446962\n0.768803 0.578506 0.568924\n0.818803 0.628506 0.690886\n0.868803 0.678506 0.812848\n0.918803 0.728506 0.934810\n0.968803 0.778506 1.000000\n1.000000 0.828506 1.000000\n1.000000 0.878506 1.000000\n0.693803 0.541882 0.350000\n0.743803 0.591882 0.471962\n0.793803 0.641882 0.593924\n0.843803 0.691882 0.715886\n0.893803 0.741882 0.837848\n0.943803 0.791882 0.959810\n0.993803 0.841882 1.000000\n1.000000 0.891882 1.000000\n1.000000 0.941882 1.000000\n0.718803 0.605259 0.375000\n0.768803 0.655259 0.496962\n0.818803 0.705259 0.618924\n0.868803 0.755259 0.740886\n0.918803 0.805259 0.862848\n0.968803 0.855259 0.984810\n1.000000 0.905259 1.000000\n1.000000 0.955259 1.000000\n1.000000 1.000000 1.000000\n0.743803 0.668635 0.400000\n0.793803 0.718635 0.521962\n0.843803 0.768635 0.643924\n0.893803 0.818635 0.765886\n0.943803 0.868635 0.887848\n0.993803 0.918635 1.000000\n1.000000 0.968635 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n0.768803 0.732012 0.425000\n0.818803 0.782012 0.546962\n0.868803 0.832012 0.668924\n0.918803 0.882012 0.790886\n0.968803 0.932012 0.912848\n1.000000 0.982012 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n0.793803 0.795388 0.450000\n0.843803 0.845388 0.571962\n0.893803 0.895388 0.693924\n0.943803 0.945388 0.815886\n0.993803 0.995388 0.937848\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n0.818803 0.858765 0.475000\n0.868803 0.908765 0.596962\n0.918803 0.958765 0.718924\n0.968803 1.000000 0.840886\n1.000000 1.000000 0.962848\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n0.843803 0.922141 0.500000\n0.893803 0.972141 0.621962\n0.943803 1.000000 0.743924\n0.993803 1.000000 0.865886\n1.000000 1.000000 0.987848\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n0.868803 0.985518 0.525000\n0.918803 1.000000 0.646962\n0.968803 1.000000 0.768924\n1.000000 1.000000 0.890886\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n0.893803 1.000000 0.550000\n0.943803 1.000000 0.671962\n0.993803 1.000000 0.793924\n1.000000 1.000000 0.915886\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n0.918803 1.000000 0.575000\n0.968803 1.000000 0.696962\n1.000000 1.000000 0.818924\n1.000000 1.000000 0.940886\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n0.943803 1.000000 0.600000\n0.993803 1.000000 0.721962\n1.000000 1.000000 0.843924\n1.000000 1.000000 0.965886\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n0.968803 1.000000 0.625000\n1.000000 1.000000 0.746962\n1.000000 1.000000 0.868924\n1.000000 1.000000 0.990886\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n0.632003 0.250000 0.250000\n0.682003 0.300000 0.371962\n0.732003 0.350000 0.493924\n0.782003 0.400000 0.615886\n0.832003 0.450000 0.737848\n0.882003 0.500000 0.859810\n0.932003 0.550000 0.981771\n0.982003 0.600000 1.000000\n1.000000 0.650000 1.000000\n0.657003 0.313376 0.275000\n0.707003 0.363376 0.396962\n0.757003 0.413376 0.518924\n0.807003 0.463376 0.640886\n0.857003 0.513376 0.762848\n0.907003 0.563376 0.884810\n0.957003 0.613376 1.000000\n1.000000 0.663376 1.000000\n1.000000 0.713376 1.000000\n0.682003 0.376753 0.300000\n0.732003 0.426753 0.421962\n0.782003 0.476753 0.543924\n0.832003 0.526753 0.665886\n0.882003 0.576753 0.787848\n0.932003 0.626753 0.909810\n0.982003 0.676753 1.000000\n1.000000 0.726753 1.000000\n1.000000 0.776753 1.000000\n0.707003 0.440129 0.325000\n0.757003 0.490129 0.446962\n0.807003 0.540129 0.568924\n0.857003 0.590129 0.690886\n0.907003 0.640129 0.812848\n0.957003 0.690129 0.934810\n1.000000 0.740129 1.000000\n1.000000 0.790129 1.000000\n1.000000 0.840129 1.000000\n0.732003 0.503506 0.350000\n0.782003 0.553506 0.471962\n0.832003 0.603506 0.593924\n0.882003 0.653506 0.715886\n0.932003 0.703506 0.837848\n0.982003 0.753506 0.959810\n1.000000 0.803506 1.000000\n1.000000 0.853506 1.000000\n1.000000 0.903506 1.000000\n0.757003 0.566882 0.375000\n0.807003 0.616882 0.496962\n0.857003 0.666882 0.618924\n0.907003 0.716882 0.740886\n0.957003 0.766882 0.862848\n1.000000 0.816882 0.984810\n1.000000 0.866882 1.000000\n1.000000 0.916882 1.000000\n1.000000 0.966882 1.000000\n0.782003 0.630259 0.400000\n0.832003 0.680259 0.521962\n0.882003 0.730259 0.643924\n0.932003 0.780259 0.765886\n0.982003 0.830259 0.887848\n1.000000 0.880259 1.000000\n1.000000 0.930259 1.000000\n1.000000 0.980259 1.000000\n1.000000 1.000000 1.000000\n0.807003 0.693635 0.425000\n0.857003 0.743635 0.546962\n0.907003 0.793635 0.668924\n0.957003 0.843635 0.790886\n1.000000 0.893635 0.912848\n1.000000 0.943635 1.000000\n1.000000 0.993635 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n0.832003 0.757012 0.450000\n0.882003 0.807012 0.571962\n0.932003 0.857012 0.693924\n0.982003 0.907012 0.815886\n1.000000 0.957012 0.937848\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n0.857003 0.820388 0.475000\n0.907003 0.870388 0.596962\n0.957003 0.920388 0.718924\n1.000000 0.970388 0.840886\n1.000000 1.000000 0.962848\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n0.882003 0.883765 0.500000\n0.932003 0.933765 0.621962\n0.982003 0.983765 0.743924\n1.000000 1.000000 0.865886\n1.000000 1.000000 0.987848\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n0.907003 0.947141 0.525000\n0.957003 0.997141 0.646962\n1.000000 1.000000 0.768924\n1.000000 1.000000 0.890886\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n0.932003 1.000000 0.550000\n0.982003 1.000000 0.671962\n1.000000 1.000000 0.793924\n1.000000 1.000000 0.915886\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n0.957003 1.000000 0.575000\n1.000000 1.000000 0.696962\n1.000000 1.000000 0.818924\n1.000000 1.000000 0.940886\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n0.982003 1.000000 0.600000\n1.000000 1.000000 0.721962\n1.000000 1.000000 0.843924\n1.000000 1.000000 0.965886\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 0.625000\n1.000000 1.000000 0.746962\n1.000000 1.000000 0.868924\n1.000000 1.000000 0.990886\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 0.650000\n1.000000 1.000000 0.771962\n1.000000 1.000000 0.893924\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n0.695203 0.275000 0.275000\n0.745203 0.325000 0.396962\n0.795203 0.375000 0.518924\n0.845203 0.425000 0.640886\n0.895203 0.475000 0.762848\n0.945203 0.525000 0.884810\n0.995203 0.575000 1.000000\n1.000000 0.625000 1.000000\n1.000000 0.675000 1.000000\n0.720203 0.338376 0.300000\n0.770203 0.388376 0.421962\n0.820203 0.438376 0.543924\n0.870203 0.488376 0.665886\n0.920203 0.538376 0.787848\n0.970203 0.588376 0.909810\n1.000000 0.638376 1.000000\n1.000000 0.688376 1.000000\n1.000000 0.738376 1.000000\n0.745203 0.401753 0.325000\n0.795203 0.451753 0.446962\n0.845203 0.501753 0.568924\n0.895203 0.551753 0.690886\n0.945203 0.601753 0.812848\n0.995203 0.651753 0.934810\n1.000000 0.701753 1.000000\n1.000000 0.751753 1.000000\n1.000000 0.801753 1.000000\n0.770203 0.465129 0.350000\n0.820203 0.515129 0.471962\n0.870203 0.565129 0.593924\n0.920203 0.615129 0.715886\n0.970203 0.665129 0.837848\n1.000000 0.715129 0.959810\n1.000000 0.765129 1.000000\n1.000000 0.815129 1.000000\n1.000000 0.865129 1.000000\n0.795203 0.528506 0.375000\n0.845203 0.578506 0.496962\n0.895203 0.628506 0.618924\n0.945203 0.678506 0.740886\n0.995203 0.728506 0.862848\n1.000000 0.778506 0.984810\n1.000000 0.828506 1.000000\n1.000000 0.878506 1.000000\n1.000000 0.928506 1.000000\n0.820203 0.591882 0.400000\n0.870203 0.641882 0.521962\n0.920203 0.691882 0.643924\n0.970203 0.741882 0.765886\n1.000000 0.791882 0.887848\n1.000000 0.841882 1.000000\n1.000000 0.891882 1.000000\n1.000000 0.941882 1.000000\n1.000000 0.991882 1.000000\n0.845203 0.655259 0.425000\n0.895203 0.705259 0.546962\n0.945203 0.755259 0.668924\n0.995203 0.805259 0.790886\n1.000000 0.855259 0.912848\n1.000000 0.905259 1.000000\n1.000000 0.955259 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n0.870203 0.718635 0.450000\n0.920203 0.768635 0.571962\n0.970203 0.818635 0.693924\n1.000000 0.868635 0.815886\n1.000000 0.918635 0.937848\n1.000000 0.968635 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n0.895203 0.782012 0.475000\n0.945203 0.832012 0.596962\n0.995203 0.882012 0.718924\n1.000000 0.932012 0.840886\n1.000000 0.982012 0.962848\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n0.920203 0.845388 0.500000\n0.970203 0.895388 0.621962\n1.000000 0.945388 0.743924\n1.000000 0.995388 0.865886\n1.000000 1.000000 0.987848\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n0.945203 0.908765 0.525000\n0.995203 0.958765 0.646962\n1.000000 1.000000 0.768924\n1.000000 1.000000 0.890886\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n0.970203 0.972141 0.550000\n1.000000 1.000000 0.671962\n1.000000 1.000000 0.793924\n1.000000 1.000000 0.915886\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n0.995203 1.000000 0.575000\n1.000000 1.000000 0.696962\n1.000000 1.000000 0.818924\n1.000000 1.000000 0.940886\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 0.600000\n1.000000 1.000000 0.721962\n1.000000 1.000000 0.843924\n1.000000 1.000000 0.965886\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 0.625000\n1.000000 1.000000 0.746962\n1.000000 1.000000 0.868924\n1.000000 1.000000 0.990886\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 0.650000\n1.000000 1.000000 0.771962\n1.000000 1.000000 0.893924\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 0.675000\n1.000000 1.000000 0.796962\n1.000000 1.000000 0.918924\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n0.758404 0.300000 0.300000\n0.808404 0.350000 0.421962\n0.858404 0.400000 0.543924\n0.908404 0.450000 0.665886\n0.958404 0.500000 0.787848\n1.000000 0.550000 0.909810\n1.000000 0.600000 1.000000\n1.000000 0.650000 1.000000\n1.000000 0.700000 1.000000\n0.783404 0.363376 0.325000\n0.833404 0.413376 0.446962\n0.883404 0.463376 0.568924\n0.933404 0.513376 0.690886\n0.983404 0.563376 0.812848\n1.000000 0.613376 0.934810\n1.000000 0.663376 1.000000\n1.000000 0.713376 1.000000\n1.000000 0.763376 1.000000\n0.808404 0.426753 0.350000\n0.858404 0.476753 0.471962\n0.908404 0.526753 0.593924\n0.958404 0.576753 0.715886\n1.000000 0.626753 0.837848\n1.000000 0.676753 0.959810\n1.000000 0.726753 1.000000\n1.000000 0.776753 1.000000\n1.000000 0.826753 1.000000\n0.833404 0.490129 0.375000\n0.883404 0.540129 0.496962\n0.933404 0.590129 0.618924\n0.983404 0.640129 0.740886\n1.000000 0.690129 0.862848\n1.000000 0.740129 0.984810\n1.000000 0.790129 1.000000\n1.000000 0.840129 1.000000\n1.000000 0.890129 1.000000\n0.858404 0.553506 0.400000\n0.908404 0.603506 0.521962\n0.958404 0.653506 0.643924\n1.000000 0.703506 0.765886\n1.000000 0.753506 0.887848\n1.000000 0.803506 1.000000\n1.000000 0.853506 1.000000\n1.000000 0.903506 1.000000\n1.000000 0.953506 1.000000\n0.883404 0.616882 0.425000\n0.933404 0.666882 0.546962\n0.983404 0.716882 0.668924\n1.000000 0.766882 0.790886\n1.000000 0.816882 0.912848\n1.000000 0.866882 1.000000\n1.000000 0.916882 1.000000\n1.000000 0.966882 1.000000\n1.000000 1.000000 1.000000\n0.908404 0.680259 0.450000\n0.958404 0.730259 0.571962\n1.000000 0.780259 0.693924\n1.000000 0.830259 0.815886\n1.000000 0.880259 0.937848\n1.000000 0.930259 1.000000\n1.000000 0.980259 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n0.933404 0.743635 0.475000\n0.983404 0.793635 0.596962\n1.000000 0.843635 0.718924\n1.000000 0.893635 0.840886\n1.000000 0.943635 0.962848\n1.000000 0.993635 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n0.958404 0.807012 0.500000\n1.000000 0.857012 0.621962\n1.000000 0.907012 0.743924\n1.000000 0.957012 0.865886\n1.000000 1.000000 0.987848\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n0.983404 0.870388 0.525000\n1.000000 0.920388 0.646962\n1.000000 0.970388 0.768924\n1.000000 1.000000 0.890886\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 0.933765 0.550000\n1.000000 0.983765 0.671962\n1.000000 1.000000 0.793924\n1.000000 1.000000 0.915886\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 0.997141 0.575000\n1.000000 1.000000 0.696962\n1.000000 1.000000 0.818924\n1.000000 1.000000 0.940886\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 0.600000\n1.000000 1.000000 0.721962\n1.000000 1.000000 0.843924\n1.000000 1.000000 0.965886\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 0.625000\n1.000000 1.000000 0.746962\n1.000000 1.000000 0.868924\n1.000000 1.000000 0.990886\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 0.650000\n1.000000 1.000000 0.771962\n1.000000 1.000000 0.893924\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 0.675000\n1.000000 1.000000 0.796962\n1.000000 1.000000 0.918924\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 0.700000\n1.000000 1.000000 0.821962\n1.000000 1.000000 0.943924\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n0.821604 0.325000 0.325000\n0.871604 0.375000 0.446962\n0.921604 0.425000 0.568924\n0.971604 0.475000 0.690886\n1.000000 0.525000 0.812848\n1.000000 0.575000 0.934810\n1.000000 0.625000 1.000000\n1.000000 0.675000 1.000000\n1.000000 0.725000 1.000000\n0.846604 0.388376 0.350000\n0.896604 0.438376 0.471962\n0.946604 0.488376 0.593924\n0.996604 0.538376 0.715886\n1.000000 0.588376 0.837848\n1.000000 0.638376 0.959810\n1.000000 0.688376 1.000000\n1.000000 0.738376 1.000000\n1.000000 0.788376 1.000000\n0.871604 0.451753 0.375000\n0.921604 0.501753 0.496962\n0.971604 0.551753 0.618924\n1.000000 0.601753 0.740886\n1.000000 0.651753 0.862848\n1.000000 0.701753 0.984810\n1.000000 0.751753 1.000000\n1.000000 0.801753 1.000000\n1.000000 0.851753 1.000000\n0.896604 0.515129 0.400000\n0.946604 0.565129 0.521962\n0.996604 0.615129 0.643924\n1.000000 0.665129 0.765886\n1.000000 0.715129 0.887848\n1.000000 0.765129 1.000000\n1.000000 0.815129 1.000000\n1.000000 0.865129 1.000000\n1.000000 0.915129 1.000000\n0.921604 0.578506 0.425000\n0.971604 0.628506 0.546962\n1.000000 0.678506 0.668924\n1.000000 0.728506 0.790886\n1.000000 0.778506 0.912848\n1.000000 0.828506 1.000000\n1.000000 0.878506 1.000000\n1.000000 0.928506 1.000000\n1.000000 0.978506 1.000000\n0.946604 0.641882 0.450000\n0.996604 0.691882 0.571962\n1.000000 0.741882 0.693924\n1.000000 0.791882 0.815886\n1.000000 0.841882 0.937848\n1.000000 0.891882 1.000000\n1.000000 0.941882 1.000000\n1.000000 0.991882 1.000000\n1.000000 1.000000 1.000000\n0.971604 0.705259 0.475000\n1.000000 0.755259 0.596962\n1.000000 0.805259 0.718924\n1.000000 0.855259 0.840886\n1.000000 0.905259 0.962848\n1.000000 0.955259 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n0.996604 0.768635 0.500000\n1.000000 0.818635 0.621962\n1.000000 0.868635 0.743924\n1.000000 0.918635 0.865886\n1.000000 0.968635 0.987848\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 0.832012 0.525000\n1.000000 0.882012 0.646962\n1.000000 0.932012 0.768924\n1.000000 0.982012 0.890886\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 0.895388 0.550000\n1.000000 0.945388 0.671962\n1.000000 0.995388 0.793924\n1.000000 1.000000 0.915886\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 0.958765 0.575000\n1.000000 1.000000 0.696962\n1.000000 1.000000 0.818924\n1.000000 1.000000 0.940886\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 0.600000\n1.000000 1.000000 0.721962\n1.000000 1.000000 0.843924\n1.000000 1.000000 0.965886\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 0.625000\n1.000000 1.000000 0.746962\n1.000000 1.000000 0.868924\n1.000000 1.000000 0.990886\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 0.650000\n1.000000 1.000000 0.771962\n1.000000 1.000000 0.893924\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 0.675000\n1.000000 1.000000 0.796962\n1.000000 1.000000 0.918924\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 0.700000\n1.000000 1.000000 0.821962\n1.000000 1.000000 0.943924\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 0.725000\n1.000000 1.000000 0.846962\n1.000000 1.000000 0.968924\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n0.884804 0.350000 0.350000\n0.934804 0.400000 0.471962\n0.984804 0.450000 0.593924\n1.000000 0.500000 0.715886\n1.000000 0.550000 0.837848\n1.000000 0.600000 0.959810\n1.000000 0.650000 1.000000\n1.000000 0.700000 1.000000\n1.000000 0.750000 1.000000\n0.909804 0.413376 0.375000\n0.959804 0.463376 0.496962\n1.000000 0.513376 0.618924\n1.000000 0.563376 0.740886\n1.000000 0.613376 0.862848\n1.000000 0.663376 0.984810\n1.000000 0.713376 1.000000\n1.000000 0.763376 1.000000\n1.000000 0.813376 1.000000\n0.934804 0.476753 0.400000\n0.984804 0.526753 0.521962\n1.000000 0.576753 0.643924\n1.000000 0.626753 0.765886\n1.000000 0.676753 0.887848\n1.000000 0.726753 1.000000\n1.000000 0.776753 1.000000\n1.000000 0.826753 1.000000\n1.000000 0.876753 1.000000\n0.959804 0.540129 0.425000\n1.000000 0.590129 0.546962\n1.000000 0.640129 0.668924\n1.000000 0.690129 0.790886\n1.000000 0.740129 0.912848\n1.000000 0.790129 1.000000\n1.000000 0.840129 1.000000\n1.000000 0.890129 1.000000\n1.000000 0.940129 1.000000\n0.984804 0.603506 0.450000\n1.000000 0.653506 0.571962\n1.000000 0.703506 0.693924\n1.000000 0.753506 0.815886\n1.000000 0.803506 0.937848\n1.000000 0.853506 1.000000\n1.000000 0.903506 1.000000\n1.000000 0.953506 1.000000\n1.000000 1.000000 1.000000\n1.000000 0.666882 0.475000\n1.000000 0.716882 0.596962\n1.000000 0.766882 0.718924\n1.000000 0.816882 0.840886\n1.000000 0.866882 0.962848\n1.000000 0.916882 1.000000\n1.000000 0.966882 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 0.730259 0.500000\n1.000000 0.780259 0.621962\n1.000000 0.830259 0.743924\n1.000000 0.880259 0.865886\n1.000000 0.930259 0.987848\n1.000000 0.980259 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 0.793635 0.525000\n1.000000 0.843635 0.646962\n1.000000 0.893635 0.768924\n1.000000 0.943635 0.890886\n1.000000 0.993635 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 0.857012 0.550000\n1.000000 0.907012 0.671962\n1.000000 0.957012 0.793924\n1.000000 1.000000 0.915886\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 0.920388 0.575000\n1.000000 0.970388 0.696962\n1.000000 1.000000 0.818924\n1.000000 1.000000 0.940886\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 0.983765 0.600000\n1.000000 1.000000 0.721962\n1.000000 1.000000 0.843924\n1.000000 1.000000 0.965886\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 0.625000\n1.000000 1.000000 0.746962\n1.000000 1.000000 0.868924\n1.000000 1.000000 0.990886\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 0.650000\n1.000000 1.000000 0.771962\n1.000000 1.000000 0.893924\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 0.675000\n1.000000 1.000000 0.796962\n1.000000 1.000000 0.918924\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 0.700000\n1.000000 1.000000 0.821962\n1.000000 1.000000 0.943924\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 0.725000\n1.000000 1.000000 0.846962\n1.000000 1.000000 0.968924\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 0.750000\n1.000000 1.000000 0.871962\n1.000000 1.000000 0.993924\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n0.948005 0.375000 0.375000\n0.998005 0.425000 0.496962\n1.000000 0.475000 0.618924\n1.000000 0.525000 0.740886\n1.000000 0.575000 0.862848\n1.000000 0.625000 0.984810\n1.000000 0.675000 1.000000\n1.000000 0.725000 1.000000\n1.000000 0.775000 1.000000\n0.973005 0.438376 0.400000\n1.000000 0.488376 0.521962\n1.000000 0.538376 0.643924\n1.000000 0.588376 0.765886\n1.000000 0.638376 0.887848\n1.000000 0.688376 1.000000\n1.000000 0.738376 1.000000\n1.000000 0.788376 1.000000\n1.000000 0.838376 1.000000\n0.998005 0.501753 0.425000\n1.000000 0.551753 0.546962\n1.000000 0.601753 0.668924\n1.000000 0.651753 0.790886\n1.000000 0.701753 0.912848\n1.000000 0.751753 1.000000\n1.000000 0.801753 1.000000\n1.000000 0.851753 1.000000\n1.000000 0.901753 1.000000\n1.000000 0.565129 0.450000\n1.000000 0.615129 0.571962\n1.000000 0.665129 0.693924\n1.000000 0.715129 0.815886\n1.000000 0.765129 0.937848\n1.000000 0.815129 1.000000\n1.000000 0.865129 1.000000\n1.000000 0.915129 1.000000\n1.000000 0.965129 1.000000\n1.000000 0.628506 0.475000\n1.000000 0.678506 0.596962\n1.000000 0.728506 0.718924\n1.000000 0.778506 0.840886\n1.000000 0.828506 0.962848\n1.000000 0.878506 1.000000\n1.000000 0.928506 1.000000\n1.000000 0.978506 1.000000\n1.000000 1.000000 1.000000\n1.000000 0.691882 0.500000\n1.000000 0.741882 0.621962\n1.000000 0.791882 0.743924\n1.000000 0.841882 0.865886\n1.000000 0.891882 0.987848\n1.000000 0.941882 1.000000\n1.000000 0.991882 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 0.755259 0.525000\n1.000000 0.805259 0.646962\n1.000000 0.855259 0.768924\n1.000000 0.905259 0.890886\n1.000000 0.955259 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 0.818635 0.550000\n1.000000 0.868635 0.671962\n1.000000 0.918635 0.793924\n1.000000 0.968635 0.915886\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 0.882012 0.575000\n1.000000 0.932012 0.696962\n1.000000 0.982012 0.818924\n1.000000 1.000000 0.940886\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 0.945388 0.600000\n1.000000 0.995388 0.721962\n1.000000 1.000000 0.843924\n1.000000 1.000000 0.965886\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 0.625000\n1.000000 1.000000 0.746962\n1.000000 1.000000 0.868924\n1.000000 1.000000 0.990886\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 0.650000\n1.000000 1.000000 0.771962\n1.000000 1.000000 0.893924\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 0.675000\n1.000000 1.000000 0.796962\n1.000000 1.000000 0.918924\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 0.700000\n1.000000 1.000000 0.821962\n1.000000 1.000000 0.943924\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 0.725000\n1.000000 1.000000 0.846962\n1.000000 1.000000 0.968924\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 0.750000\n1.000000 1.000000 0.871962\n1.000000 1.000000 0.993924\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 0.775000\n1.000000 1.000000 0.896962\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 0.400000 0.400000\n1.000000 0.450000 0.521962\n1.000000 0.500000 0.643924\n1.000000 0.550000 0.765886\n1.000000 0.600000 0.887848\n1.000000 0.650000 1.000000\n1.000000 0.700000 1.000000\n1.000000 0.750000 1.000000\n1.000000 0.800000 1.000000\n1.000000 0.463376 0.425000\n1.000000 0.513376 0.546962\n1.000000 0.563376 0.668924\n1.000000 0.613376 0.790886\n1.000000 0.663376 0.912848\n1.000000 0.713376 1.000000\n1.000000 0.763376 1.000000\n1.000000 0.813376 1.000000\n1.000000 0.863376 1.000000\n1.000000 0.526753 0.450000\n1.000000 0.576753 0.571962\n1.000000 0.626753 0.693924\n1.000000 0.676753 0.815886\n1.000000 0.726753 0.937848\n1.000000 0.776753 1.000000\n1.000000 0.826753 1.000000\n1.000000 0.876753 1.000000\n1.000000 0.926753 1.000000\n1.000000 0.590129 0.475000\n1.000000 0.640129 0.596962\n1.000000 0.690129 0.718924\n1.000000 0.740129 0.840886\n1.000000 0.790129 0.962848\n1.000000 0.840129 1.000000\n1.000000 0.890129 1.000000\n1.000000 0.940129 1.000000\n1.000000 0.990129 1.000000\n1.000000 0.653506 0.500000\n1.000000 0.703506 0.621962\n1.000000 0.753506 0.743924\n1.000000 0.803506 0.865886\n1.000000 0.853506 0.987848\n1.000000 0.903506 1.000000\n1.000000 0.953506 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 0.716882 0.525000\n1.000000 0.766882 0.646962\n1.000000 0.816882 0.768924\n1.000000 0.866882 0.890886\n1.000000 0.916882 1.000000\n1.000000 0.966882 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 0.780259 0.550000\n1.000000 0.830259 0.671962\n1.000000 0.880259 0.793924\n1.000000 0.930259 0.915886\n1.000000 0.980259 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 0.843635 0.575000\n1.000000 0.893635 0.696962\n1.000000 0.943635 0.818924\n1.000000 0.993635 0.940886\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 0.907012 0.600000\n1.000000 0.957012 0.721962\n1.000000 1.000000 0.843924\n1.000000 1.000000 0.965886\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 0.970388 0.625000\n1.000000 1.000000 0.746962\n1.000000 1.000000 0.868924\n1.000000 1.000000 0.990886\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 0.650000\n1.000000 1.000000 0.771962\n1.000000 1.000000 0.893924\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 0.675000\n1.000000 1.000000 0.796962\n1.000000 1.000000 0.918924\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 0.700000\n1.000000 1.000000 0.821962\n1.000000 1.000000 0.943924\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 0.725000\n1.000000 1.000000 0.846962\n1.000000 1.000000 0.968924\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 0.750000\n1.000000 1.000000 0.871962\n1.000000 1.000000 0.993924\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 0.775000\n1.000000 1.000000 0.896962\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 0.800000\n1.000000 1.000000 0.921962\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000\n1.000000 1.000000 1.000000"
+  },
+  "pacing": "fast",
+  "freezes": [],
+  "probe": {
+    "audio_codec": "aac",
+    "audio_channels": 1,
+    "audio_sample_rate": 22050,
+    "format_name": "mov,mp4,m4a,3gp,3g2,mj2",
+    "pixel_format": "yuv420p"
+  }
+}
