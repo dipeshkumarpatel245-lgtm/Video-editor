@@ -1,36 +1,56 @@
 # Video Template Studio
 
-A Python-based video editing workflow for analyzing template footage, extracting shot structure and motion cues, matching source clips to template segments, and generating recreated edits for export or preview rendering.
+<p align="center">
+  <img src="https://img.shields.io/badge/Python-3.10%2B-3776AB?logo=python&logoColor=white" alt="Python 3.10+" />
+  <img src="https://img.shields.io/badge/FastAPI-0.110%2B-009688?logo=fastapi&logoColor=white" alt="FastAPI" />
+  <img src="https://img.shields.io/badge/OpenCV-Enabled-5C3EE8" alt="OpenCV" />
+  <img src="https://img.shields.io/badge/FFmpeg-Required-0078D4?logo=ffmpeg&logoColor=white" alt="FFmpeg" />
+</p>
 
-This project combines:
-- a FastAPI backend for uploads, analysis, matching, export, and rendering
-- a Python media-analysis pipeline for video, audio, and scene extraction
-- template-driven edit generation logic for replace/recut workflows
-- a lightweight frontend served from the `web/` directory
+A Python-powered video editing workflow for analyzing reference footage, matching source clips to template segments, and recreating polished edits for export and rendering.
 
-## What the project does
+If you have a reference edit and want to rebuild it using different source footage, this project helps automate that process.
 
-The app is organized around a template-based editing flow:
+## Why this project exists
+
+Most video editing workflows are manual, slow, and repetitive. This project is built for a specific problem:
+
+- A team has a reference edit or template video
+- They want to recreate the same structure using new or alternate clips
+- They need matching, timing, and export automation instead of doing everything by hand
+
+This repo helps automate that workflow with analysis, matching, and edit reconstruction.
+
+## What it does
+
+The app is organized around a template-driven video recreation flow:
 
 1. Upload a template video
-2. Analyze its scene structure and timing
+2. Analyze its scene structure, timing, and visual/audio cues
 3. Upload one or more source clips
-4. Match those clips to template slots using visual/audio similarity
-5. Recreate the edit in either replace or recut mode
+4. Match those clips to template slots using similarity analysis
+5. Recreate the edit in replace or recut mode
 6. Export or render the final result
 
-This is not a general-purpose offline editor; it is designed around shot-level matching and template reconstruction.
+This is not a general-purpose offline editor. It is designed around edit reconstruction from a reference workflow.
 
-## Features
+## Ideal use cases
 
-- Upload template and clip videos
-- Analyze video structure and scene timing
-- Extract motion, color, and audio features
-- Match clips to template shot slots
-- Recreate edits using replace or recut behavior
-- Export to FCPXML, Premiere-style output, EDL, and CapCut package formats
-- Render preview MP4s for review
-- Serve a lightweight SPA from the same application
+- Rebuilding a reference edit with alternate source footage
+- Matching clips to a template structure for content repurposing
+- Creating standardized video variations from approved edit patterns
+- Template-based content workflows for agencies, marketing teams, and creators
+
+## Core features
+
+- Template and clip upload workflow
+- Video and audio scene analysis
+- Shot timing and motion extraction
+- Visual/audio feature matching
+- Replace and recut reconstruction modes
+- Export support for FCPXML, Premiere-style output, EDL, and CapCut package formats
+- Render preview MP4 outputs
+- FastAPI backend and lightweight web frontend
 
 ## Repository structure
 
@@ -42,22 +62,22 @@ This is not a general-purpose offline editor; it is designed around shot-level m
 │   ├── fusion.py
 │   ├── pipeline.py
 │   └── probe.py
-├── config.py              # Global app config and environment defaults
-├── deploy/                # Deployment-related assets
+├── config.py              # Runtime config and environment settings
+├── deploy/                # Deployment assets
 ├── edit.py                # Shared edit model definitions
 ├── export/                # Exporters and packaging logic
 ├── ffutils.py             # FFmpeg / FFprobe wrappers
-├── recreate/              # Matching, recommendation, rendering, replace/recut logic
+├── recreate/              # Matching, recommendation, rendering, and assembly logic
 │   ├── matching.py
 │   ├── recut.py
 │   ├── recommend.py
 │   ├── render.py
 │   └── replace.py
-├── server/                # FastAPI app bootstrap and API routes
+├── server/                # FastAPI app and API routes
 │   ├── api.py
 │   └── main.py
-├── template/              # Template schema and stored template definitions
-├── tests/                 # Test suite
+├── template/              # Template schema and stored definitions
+├── tests/                 # Automated tests
 ├── web/                   # Frontend static assets
 ├── workers/               # Worker-related code
 ├── workspace/             # Generated media and outputs
@@ -70,7 +90,7 @@ This is not a general-purpose offline editor; it is designed around shot-level m
 
 ## Tech stack
 
-- Python 3
+- Python 3.10+
 - FastAPI
 - NumPy / SciPy
 - OpenCV
@@ -85,9 +105,9 @@ This is not a general-purpose offline editor; it is designed around shot-level m
 - Python 3.10+
 - FFmpeg installed and available on `PATH`
 - FFprobe installed and available on `PATH`
-- Redis if Celery/background worker support is enabled
+- Redis if background worker support is enabled
 
-## Installation
+## Quick start
 
 Clone the repository:
 
@@ -111,7 +131,7 @@ pip install -r requirements.txt
 
 ## Configuration
 
-The app reads runtime settings via `config.py` using environment variables.
+The app reads runtime settings from `config.py` and environment variables.
 
 Common options:
 
@@ -129,7 +149,7 @@ export VT_BROKER_URL=redis://localhost:6379/0
 
 If these are not set, the project falls back to sensible defaults.
 
-## Running the app
+## Run the app
 
 Start the API server:
 
@@ -137,9 +157,9 @@ Start the API server:
 uvicorn server.main:app --host 0.0.0.0 --port 8000 --reload
 ```
 
-Then browse:
+Then open:
 
-- API documentation: `http://localhost:8000/docs`
+- API docs: `http://localhost:8000/docs`
 - Web app: `http://localhost:8000/`
 
 ## API overview
@@ -148,12 +168,12 @@ The app exposes its REST API under `/api`.
 
 Key endpoints include:
 
-- `POST /api/upload` — upload a template or clip video
-- `POST /api/analyze` — analyze a template video and create a canonical template
+- `POST /api/upload` — upload a template or source clip
+- `POST /api/analyze` — analyze a template and create a canonical structure
 - `GET /api/templates` — list saved templates
-- `GET /api/templates/{template_id}` — fetch a specific template
+- `GET /api/templates/{template_id}` — fetch a template
 - `POST /api/recreate` — generate a recreated edit
-- `GET /api/edits/{edit_id}` — fetch an edit payload
+- `GET /api/edits/{edit_id}` — fetch edit data
 - `POST /api/export` — export to a supported format
 - `POST /api/render` — render a preview MP4
 - `GET /api/render/stream/{name}` — stream a rendered video
@@ -161,8 +181,8 @@ Key endpoints include:
 
 ## Typical workflow
 
-1. Upload a template video
-2. Analyze it to extract scene and timing structure
+1. Upload a reference template video
+2. Analyze it to extract scene timing and structure
 3. Upload one or more source clips
 4. Recreate the edit using match-and-fill logic
 5. Export or render the final result
@@ -173,20 +193,20 @@ The codebase is organized around a few main responsibilities:
 
 - `analysis/` handles frame sampling, shot detection, and content extraction
 - `template/` stores and validates analyzed template structure
-- `recreate/` performs clip assignment, matching, and edit assembly
+- `recreate/` performs clip matching, recommendation, and edit assembly
 - `export/` produces downstream editing packages and formats
 - `server/` exposes the FastAPI API and serves the frontend
 
-Generated media and working files are stored under the configured workspace directory (default: `workspace/`).
+Generated media and working files are stored under the workspace directory (default: `workspace/`).
 
 ## License
 
 This repository does not currently declare a license in the project metadata. If you intend to reuse, publish, or commercialize the code, check repository ownership and licensing status before doing so.
 
-## Important
+## Important note
 
 This project processes large media files and performs computational analysis on video content. Depending on file size and clip count, it may require significant CPU, RAM, and FFmpeg support.
 
 ---
 
-This project is best understood as a template-driven video recreation engine rather than a general-purpose editing suite.
+Video Template Studio is a template-driven video recreation engine designed to help automate edit reconstruction from reference footage and matching source clips.
