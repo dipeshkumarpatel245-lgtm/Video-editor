@@ -1,53 +1,66 @@
-# Video Editor
+# Video Template Studio
 
-A Python-based video editing and template recreation platform that analyzes source footage, extracts scene and motion structure, matches clips to template shots, and exports recreated edits for downstream editors.
+A Python-based video editing workflow for analyzing template footage, extracting shot structure and motion cues, matching source clips to template segments, and generating recreated edits for export or preview rendering.
 
 This project combines:
-- a FastAPI backend for uploads, analysis, recreation, rendering, and export
-- a Python analysis pipeline for detection and feature extraction
-- clip matching and edit generation logic for template-based recreations
-- a lightweight web frontend served from the `web/` directory
+- a FastAPI backend for uploads, analysis, matching, export, and rendering
+- a Python media-analysis pipeline for video, audio, and scene extraction
+- template-driven edit generation logic for replace/recut workflows
+- a lightweight frontend served from the `web/` directory
+
+## What the project does
+
+The app is organized around a template-based editing flow:
+
+1. Upload a template video
+2. Analyze its scene structure and timing
+3. Upload one or more source clips
+4. Match those clips to template slots using visual/audio similarity
+5. Recreate the edit in either replace or recut mode
+6. Export or render the final result
+
+This is not a general-purpose offline editor; it is designed around shot-level matching and template reconstruction.
 
 ## Features
 
 - Upload template and clip videos
-- Analyze video structure and scenes
-- Extract motion, color, and audio cues
-- Match clip content to template slots
-- Recreate edits using replace or recut modes
-- Export to FCPXML, Premiere-style formats, EDL, and CapCut package output
+- Analyze video structure and scene timing
+- Extract motion, color, and audio features
+- Match clips to template shot slots
+- Recreate edits using replace or recut behavior
+- Export to FCPXML, Premiere-style output, EDL, and CapCut package formats
 - Render preview MP4s for review
-- Serve a SPA from the same web app
+- Serve a lightweight SPA from the same application
 
-## Project Structure
+## Repository structure
 
 ```text
 .
-├── analysis/              # Video analysis and probing logic
+├── analysis/              # Video and audio analysis code
 │   ├── audio/
 │   ├── video/
 │   ├── fusion.py
 │   ├── pipeline.py
 │   └── probe.py
-├── config.py              # Global config and directory setup
+├── config.py              # Global app config and environment defaults
 ├── deploy/                # Deployment-related assets
 ├── edit.py                # Shared edit model definitions
 ├── export/                # Exporters and packaging logic
 ├── ffutils.py             # FFmpeg / FFprobe wrappers
-├── recreate/              # Match, replace, recut, and render logic
+├── recreate/              # Matching, recommendation, rendering, replace/recut logic
 │   ├── matching.py
 │   ├── recut.py
 │   ├── recommend.py
 │   ├── render.py
 │   └── replace.py
-├── server/                # API and app bootstrap
+├── server/                # FastAPI app bootstrap and API routes
 │   ├── api.py
 │   └── main.py
-├── template/              # Template schema and storage
+├── template/              # Template schema and stored template definitions
 ├── tests/                 # Test suite
 ├── web/                   # Frontend static assets
 ├── workers/               # Worker-related code
-├── workspace/             # Runtime-generated media / generated outputs
+├── workspace/             # Generated media and outputs
 ├── .gitignore
 ├── pytest.ini
 ├── requirements.txt
@@ -55,7 +68,7 @@ This project combines:
 └── ...
 ```
 
-## Tech Stack
+## Tech stack
 
 - Python 3
 - FastAPI
@@ -67,30 +80,30 @@ This project combines:
 - Scenedetect
 - Librosa
 
-## Prerequisites
+## Requirements
 
 - Python 3.10+
-- FFmpeg installed and available on PATH
-- FFprobe installed and available on PATH
-- Redis (for Celery/background job support if enabled)
+- FFmpeg installed and available on `PATH`
+- FFprobe installed and available on `PATH`
+- Redis if Celery/background worker support is enabled
 
 ## Installation
 
-1. Clone the repository:
+Clone the repository:
 
 ```bash
 git clone https://github.com/dipeshkumarpatel245-lgtm/Video-editor.git
 cd Video-editor
 ```
 
-2. Create a virtual environment:
+Create a virtual environment:
 
 ```bash
 python -m venv .venv
 source .venv/bin/activate
 ```
 
-3. Install dependencies:
+Install dependencies:
 
 ```bash
 pip install -r requirements.txt
@@ -98,9 +111,9 @@ pip install -r requirements.txt
 
 ## Configuration
 
-The project reads important runtime settings from environment variables through `config.py`.
+The app reads runtime settings via `config.py` using environment variables.
 
-Common settings include:
+Common options:
 
 ```bash
 export VT_WORKSPACE=/path/to/workspace
@@ -114,9 +127,9 @@ export VT_USE_OCR=0
 export VT_BROKER_URL=redis://localhost:6379/0
 ```
 
-If you do not set these, sensible defaults are used.
+If these are not set, the project falls back to sensible defaults.
 
-## Running the App
+## Running the app
 
 Start the API server:
 
@@ -124,61 +137,56 @@ Start the API server:
 uvicorn server.main:app --host 0.0.0.0 --port 8000 --reload
 ```
 
-Then open:
+Then browse:
 
-- API docs: `http://localhost:8000/docs`
+- API documentation: `http://localhost:8000/docs`
 - Web app: `http://localhost:8000/`
 
-## Main API Endpoints
+## API overview
 
-The app exposes a REST API under `/api`.
+The app exposes its REST API under `/api`.
+
+Key endpoints include:
 
 - `POST /api/upload` — upload a template or clip video
-- `POST /api/analyze` — analyze a template video and build a canonical template
+- `POST /api/analyze` — analyze a template video and create a canonical template
 - `GET /api/templates` — list saved templates
 - `GET /api/templates/{template_id}` — fetch a specific template
 - `POST /api/recreate` — generate a recreated edit
-- `GET /api/edits/{edit_id}` — fetch edit JSON
+- `GET /api/edits/{edit_id}` — fetch an edit payload
 - `POST /api/export` — export to a supported format
 - `POST /api/render` — render a preview MP4
 - `GET /api/render/stream/{name}` — stream a rendered video
-- `GET /health` — health check
+- `GET /health` — health status
 
-## Typical Workflow
+## Typical workflow
 
-1. Upload a template video.
-2. Analyze it to create a template structure.
-3. Upload one or more source clips.
-4. Recreate the edit using template matching.
-5. Export or render the final result.
+1. Upload a template video
+2. Analyze it to extract scene and timing structure
+3. Upload one or more source clips
+4. Recreate the edit using match-and-fill logic
+5. Export or render the final result
 
-## Notes
+## Implementation notes
 
-- Generated media and working files are created under the workspace directory configured by `VT_WORKSPACE`.
-- The project is designed for video analysis and shot-level matching, so performance depends on media size, clip count, and CPU/GPU resources.
-- Some features are optional and can be enabled via environment flags.
+The codebase is organized around a few main responsibilities:
 
-## Contributing
+- `analysis/` handles frame sampling, shot detection, and content extraction
+- `template/` stores and validates analyzed template structure
+- `recreate/` performs clip assignment, matching, and edit assembly
+- `export/` produces downstream editing packages and formats
+- `server/` exposes the FastAPI API and serves the frontend
 
-Contributions are welcome. For a smooth contribution flow:
-
-1. Fork the project.
-2. Create a feature branch.
-3. Make the change.
-4. Run the targeted test suite.
-5. Create a pull request with a clear summary.
+Generated media and working files are stored under the configured workspace directory (default: `workspace/`).
 
 ## License
 
-This project does not currently declare a license in the repository metadata. Please check the repository settings or project ownership before commercial or public reuse.
+This repository does not currently declare a license in the project metadata. If you intend to reuse, publish, or commercialize the code, check repository ownership and licensing status before doing so.
 
 ## Important
 
-This repository contains video-processing and media-analysis code. Ensure your environment has adequate CPU, RAM, and FFmpeg support before processing large files.
+This project processes large media files and performs computational analysis on video content. Depending on file size and clip count, it may require significant CPU, RAM, and FFmpeg support.
 
 ---
 
-If you want, I can also generate:
-- a shorter, more polished GitHub-style README
-- a project-specific README tailored to this exact codebase with diagrams and screenshots
-- a README in a more marketing / product style for public launch
+This project is best understood as a template-driven video recreation engine rather than a general-purpose editing suite.
