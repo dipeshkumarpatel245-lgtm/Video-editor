@@ -50,10 +50,39 @@ def _style_similarity(a: dict, b: dict) -> float:
     motion = 1.0 - min(1.0, abs(a["motion"] - b["motion"]))
     rgb = 1.0 - min(1.0, np.linalg.norm(np.asarray(a["mean_rgb"]) - np.asarray(b["mean_rgb"])) / np.sqrt(3.0))
     return float(np.clip(
-        0.22 * brightness + 0.12 * contrast + 0.14 * saturation + 0.12 * temperature
-        + 0.10 * edge + 0.10 * motion + 0.20 * rgb,
+        0.23 * brightness + 0.12 * contrast + 0.18 * saturation + 0.15 * temperature
+        + 0.10 * edge + 0.10 * motion + 0.12 * rgb,
         0.0, 1.0,
     ))
+
+
+def _neighbor_style(template: dict, shot_index: int) -> dict:
+    """Average style of the shot and nearby shots for continuity-aware matching."""
+    shots = template.get("shots") or []
+    if not shots:
+        return {"brightness": 0.5, "contrast": 0.1, "saturation": 0.5,
+                "temperature": 0.0, "edge_density": 0.1, "motion": 0.0,
+                "mean_rgb": [0.5, 0.5, 0.5]}
+    ids = [shot_index]
+    for off in (-1, 1):
+        j = shot_index + off
+        if 0 <= j < len(shots):
+            ids.append(j)
+    style_values = [_style_profile(shots[i]) for i in ids]
+    avg = {
+        "brightness": float(np.mean([s["brightness"] for s in style_values])),
+        "contrast": float(np.mean([s["contrast"] for s in style_values])),
+        "saturation": float(np.mean([s["saturation"] for s in style_values])),
+        "temperature": float(np.mean([s["temperature"] for s in style_values])),
+        "edge_density": float(np.mean([s["edge_density"] for s in style_values])),
+        "motion": float(np.mean([s["motion"] for s in style_values])),
+        "mean_rgb": [
+            float(np.mean([s["mean_rgb"][0] for s in style_values])),
+            float(np.mean([s["mean_rgb"][1] for s in style_values])),
+            float(np.mean([s["mean_rgb"][2] for s in style_values])),
+        ],
+    }
+    return avg
 
 
 def _frame_sig(img: np.ndarray) -> np.ndarray:
@@ -175,12 +204,12 @@ def _cos(a, b):
 
 
 def score_matrix(template: dict, clips: list[dict],
-                 w_content: float = 0.38, w_style: float = 0.28,
-                 w_duration: float = 0.22, w_other: float = 0.12) -> tuple[np.ndarray, np.ndarray]:
+                 w_content: float = 0.26, w_style: float = 0.42,
+                 w_duration: float = 0.15, w_other: float = 0.17) -> tuple[np.ndarray, np.ndarray]:
     """Return (S, B): S[shot, clip] match scores and B[shot, clip] best source offsets.
 
-    This uses a stronger visual-style similarity so different clips can still recreate the
-    same template mood, pacing, and look.
+    This version strongly favors template look and motion continuity so different clips can
+    still recreate the same cinematic feel.
     """
     shots = template["shots"]
     sigs = template_shot_sigs(template)
@@ -192,6 +221,7 @@ def score_matrix(template: dict, clips: list[dict],
         sh_feat = sh.get("content", {}).get("feature")
         sh_tags = set(sh.get("content", {}).get("tags", []))
         sh_style = _style_profile(sh)
+        neigh_style = _neighbor_style(template, i)
         m_in, m_out = _shot_margins(sh, dissolves)
         for j, cl in enumerate(clips):
             src_dur = cl["duration"]
@@ -207,6 +237,7 @@ def score_matrix(template: dict, clips: list[dict],
             content_score = float(np.clip(sim, 0.0, 1.0))
             clip_style = _style_profile(cl)
             style_score = _style_similarity(sh_style, clip_style)
+            continuity_score = _style_similarity(neigh_style, clip_style)
             if src_t is not None and src_dur >= slot_dur:
                 B[i, j] = float(np.clip(src_t, 0.0, max(0.0, src_dur - slot_dur)))
             aspect_slot = 1.0
@@ -214,22 +245,31 @@ def score_matrix(template: dict, clips: list[dict],
             aspect = float(1.0 if abs(aspect_slot - aspect_clip) < 0.05 else 0.6)
             tags = cl.get("tags", [])
             tag_bonus = 1.0 if (sh_tags & set(tags)) else 0.82
+
             style_penalty = 0.0
-            if abs(sh_style["brightness"] - clip_style["brightness"]) > 0.35:
+            if abs(sh_style["brightness"] - clip_style["brightness"]) > 0.25:
+                style_penalty += 0.14
+            if abs(sh_style["temperature"] - clip_style["temperature"]) > 0.20:
+                style_penalty += 0.12
+            if abs(sh_style["saturation"] - clip_style["saturation"]) > 0.28:
+                style_penalty += 0.10
+            if abs(sh_style["motion"] - clip_style["motion"]) > 0.25:
+                style_penalty += 0.12
+            if abs(sh_style["contrast"] - clip_style["contrast"]) > 0.20:
                 style_penalty += 0.08
-            if abs(sh_style["temperature"] - clip_style["temperature"]) > 0.35:
-                style_penalty += 0.08
-            if abs(sh_style["motion"] - clip_style["motion"]) > 0.35:
-                style_penalty += 0.06
-            S[i, j] = (w_content * content_score
-                       + w_style * max(0.0, style_score - style_penalty)
-                       + w_duration * fit
-                       + w_other * aspect * tag_bonus)
+
+            S[i, j] = (
+                w_content * content_score
+                + w_style * max(0.0, style_score - style_penalty)
+                + 0.10 * continuity_score
+                + w_duration * fit
+                + w_other * aspect * tag_bonus
+            )
     return S, B
 
 
 def assign(template: dict, clips: list[dict], allow_reuse: bool = False) -> list[dict]:
-    """Content-aware assignments for every shot, with stronger style preservation."""
+    """Content-aware assignments for every shot, with stronger style preservation and continuity."""
     n_shots = len(template["shots"])
     n_clips = len(clips)
     S, B = score_matrix(template, clips)
@@ -237,11 +277,9 @@ def assign(template: dict, clips: list[dict], allow_reuse: bool = False) -> list
         return [{"clip_idx": None, "score": 0.0, "reason": "no clips"} for _ in range(n_shots)]
     if n_clips >= n_shots:
         rows, cols = linear_sum_assignment(-S)
-        done = set()
         out = [None] * n_shots
         for r, c in zip(rows, cols):
             out[r] = c
-            done.add(c)
         return [
             {"clip_idx": int(out[i]) if out[i] is not None else None,
              "score": float(S[i, out[i]]) if out[i] is not None else 0.0,
