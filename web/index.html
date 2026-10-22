@@ -1,173 +1,175 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Video Template Studio</title>
-<link rel="stylesheet" href="/app.css">
-</head>
-<body>
-<canvas id="aurora" aria-hidden="true"></canvas>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Video Template Studio</title>
+    <meta
+      name="description"
+      content="Scrollable cinematic storytelling reveal for the Video Template Studio UI."
+    />
+    <link rel="stylesheet" href="/app.css" />
+  </head>
+  <body>
+    <canvas id="aurora" aria-hidden="true"></canvas>
 
-<div id="app">
-  <!-- ================= HERO ================= -->
-  <header id="hero">
-    <div class="hero-eyebrow">Cinematic Re-Creation</div>
-    <h1 class="hero-title">Video Template <span class="grad">Studio</span></h1>
-    <p class="hero-sub">A template is a story told in pictures — shots, cuts, rhythm, mood. Give us your footage and we rebuild that story frame by frame, true to its grade and its beat.</p>
-    <div class="scroll-hint">Scroll to begin <span class="hint-line"></span></div>
-  </header>
+    <div class="story-rail" aria-label="Story progress">
+      <span class="rail-line"></span>
+      <button class="rail-dot active" data-target="hero" aria-label="Go to intro"></button>
+      <button class="rail-dot" data-target="upload" aria-label="Go to upload"></button>
+      <button class="rail-dot" data-target="story" aria-label="Go to story panel"></button>
+      <button class="rail-dot" data-target="clips" aria-label="Go to clips"></button>
+      <button class="rail-dot" data-target="render" aria-label="Go to render"></button>
+    </div>
 
-  <!-- ================= STORY SPINE ================= -->
-  <nav id="spine" aria-hidden="true">
-    <div class="spine-track"></div>
-    <div class="spine-node active" data-chap="1">1</div>
-    <div class="spine-node" data-chap="2">2</div>
-    <div class="spine-node" data-chap="3">3</div>
-    <div class="spine-node" data-chap="4">4</div>
-    <div class="spine-node" data-chap="5">5</div>
-  </nav>
+    <main class="page-shell">
+      <section id="hero" class="panel hero reveal">
+        <p class="eyebrow">Cinematic Re-Creation</p>
+        <h1>
+          Video Template <span class="highlight">Studio</span>
+        </h1>
+        <p class="lede">
+          A template is a story told in pictures — shots, cuts, rhythm, mood.
+          Upload your footage and rebuild the narrative as a living visual reveal.
+        </p>
 
-  <main>
-    <!-- ================= CHAPTER 1 — THE ORIGINAL ================= -->
-    <section class="chapter" data-chap="1" id="step-upload">
-      <div class="chapter-head">
-        <span class="ch-num">Act I</span>
-        <div>
+        <div class="hero-actions">
+          <a href="#upload" class="primary-btn">Begin the Story</a>
+          <a href="#story" class="secondary-btn">See the Reveal</a>
+        </div>
+
+        <div class="scroll-cue">
+          <span>Scroll to begin</span>
+          <i></i>
+        </div>
+      </section>
+
+      <section id="upload" class="panel reveal">
+        <div class="panel-header">
+          <span class="chapter-tag">Act I</span>
           <h2>The Original</h2>
-          <p class="ch-sub">Begin with the template — the video your recreation should mirror, cut for cut.</p>
         </div>
-      </div>
-      <div class="card" data-tilt>
-        <div class="upload-drop" id="dropTemplate">
-          Drop your template video here — or click to browse
-          <input type="file" accept="video/*" id="fileTemplate" style="display:none">
+
+        <div class="upload-card">
+          <label for="fileTemplate" class="upload-drop">
+            <input type="file" id="fileTemplate" accept="video/*" />
+            <span>Drop your template video here</span>
+            <strong>or click to browse</strong>
+          </label>
+          <div id="templateInfo" class="meta-box hidden"></div>
         </div>
-        <div id="templateInfo" style="display:none;margin-top:12px"></div>
-      </div>
-    </section>
+      </section>
 
-    <!-- ================= CHAPTER 2 — AWAKENING ================= -->
-    <section class="chapter" data-chap="2" id="step-analyze" style="display:none">
-      <div class="chapter-head">
-        <span class="ch-num">Act II</span>
-        <div>
-          <h2>Awakening</h2>
-          <p class="ch-sub">Decompose the template into its story beats — shots, cuts, grade, energy.</p>
+      <section id="story" class="panel reveal story-layout">
+        <div class="panel-header narrow">
+          <span class="chapter-tag">Act II</span>
+          <h2>The Story Revealed</h2>
         </div>
-      </div>
-      <div class="card" data-tilt>
-        <label>Name your story</label>
-        <input id="title" placeholder="My Template" style="max-width:320px">
-        <button id="btnAnalyze" style="margin-top:16px;width:auto;padding:11px 26px">Analyze Template</button>
-        <div id="analyzeProgress" style="display:none">
-          <div class="progress-bar"><div class="fill" id="analyzeFill"></div></div>
-          <div id="analyzeLabel"></div>
-        </div>
-        <div id="templateSummary" style="display:none;margin-top:12px"></div>
-      </div>
-    </section>
 
-    <!-- ================= THE STORY (visual analysis) ================= -->
-    <section id="story" class="chapter" data-chap="2" style="display:none">
-      <div class="chapter-head center">
-        <span class="ch-num">&#9733;</span>
-        <div>
-          <h2 id="storyTitle">The Story of Your Template</h2>
-          <p class="ch-sub">Keep scrolling — every scene below is a shot from the original, recomposed from its true palette, pacing and motion.</p>
-        </div>
-      </div>
+        <div class="story-grid">
+          <aside class="story-side">
+            <div class="mini-card active">
+              <span>Shot map</span>
+              <strong>12 scenes</strong>
+            </div>
+            <div class="mini-card">
+              <span>Beat track</span>
+              <strong>68 BPM</strong>
+            </div>
+            <div class="mini-card">
+              <span>Visual tone</span>
+              <strong>Warm / moody</strong>
+            </div>
+          </aside>
 
-      <div id="arcBanner" class="arc-banner"><div class="arc-inner"></div>
-        <div class="arc-label">Act Structure</div></div>
+          <div class="story-steps">
+            <article class="story-step reveal">
+              <div class="step-index">01</div>
+              <div>
+                <h3>Capture the arc</h3>
+                <p>
+                  We isolate the original structure — the shots, cuts, pacing, and emotional turns.
+                </p>
+              </div>
+            </article>
 
-      <div class="stat-row" id="statRow">
-        <div class="stat"><b id="statShots">0</b><span>Shots</span></div>
-        <div class="stat"><b id="statBeats">0</b><span>Beats</span></div>
-        <div class="stat"><b id="statTempo">—</b><span>Tempo</span></div>
-        <div class="stat"><b id="statDur">0:00</b><span>Length</span></div>
-      </div>
+            <article class="story-step reveal">
+              <div class="step-index">02</div>
+              <div>
+                <h3>Read the mood</h3>
+                <p>
+                  Color temperature, contrast, motion, and rhythm reveal the tone of the narrative.
+                </p>
+              </div>
+            </article>
 
-      <div id="waveStage"><svg id="wave" preserveAspectRatio="none"></svg></div>
-
-      <div class="film-rail" id="filmRail"></div>
-    </section>
-
-    <!-- ================= CHAPTER 3 — THE REELS ================= -->
-    <section class="chapter" data-chap="3" id="step-clips" style="display:none">
-      <div class="chapter-head">
-        <span class="ch-num">Act III</span>
-        <div>
-          <h2>The Reels</h2>
-          <p class="ch-sub">Feed in your raw footage — each clip a candidate for one of the template's shots.</p>
-        </div>
-      </div>
-      <div class="card" data-tilt>
-        <div class="upload-drop" id="dropClips">
-          Drop your clips here — or click to browse (multiple)
-          <input type="file" accept="video/*" id="fileClips" multiple style="display:none">
-        </div>
-        <div class="file-chips" id="clipChips"></div>
-      </div>
-    </section>
-
-    <!-- ================= CHAPTER 4 — COMPOSE ================= -->
-    <section class="chapter" data-chap="4" id="step-recreate" style="display:none">
-      <div class="chapter-head">
-        <span class="ch-num">Act IV</span>
-        <div>
-          <h2>Compose</h2>
-          <p class="ch-sub">Rebuild the template's timing with your footage — replace, or recut to its beat.</p>
-        </div>
-      </div>
-      <div class="card" data-tilt>
-        <div class="row" style="align-items:flex-end">
-          <div class="col" style="max-width:320px">
-            <label>Mode</label>
-            <select id="mode">
-              <option value="replace">Replace — keep original timing</option>
-              <option value="recut">Recut — beat-matched adaptive</option>
-            </select>
+            <article class="story-step reveal">
+              <div class="step-index">03</div>
+              <div>
+                <h3>Rebuild the sequence</h3>
+                <p>
+                  New footage is matched frame by frame to preserve the same visual storytelling arc.
+                </p>
+              </div>
+            </article>
           </div>
         </div>
-        <button id="btnRecreate" style="margin-top:16px;width:auto;padding:11px 28px">Recreate</button>
-      </div>
-    </section>
+      </section>
 
-    <!-- ================= CHAPTER 5 — THE PREMIERE ================= -->
-    <section class="chapter" data-chap="5" id="step-export" style="display:none">
-      <div class="chapter-head">
-        <span class="ch-num">Act V</span>
-        <div>
-          <h2>The Premiere</h2>
-          <p class="ch-sub">Export your edit for a real editor, or render an instant preview right here.</p>
+      <section id="clips" class="panel reveal">
+        <div class="panel-header">
+          <span class="chapter-tag">Act III</span>
+          <h2>Clip Selection</h2>
         </div>
-      </div>
-      <div class="card" data-tilt>
-        <div id="editSummary" style="margin-bottom:12px"></div>
-        <div class="exports" id="exportLinks"></div>
 
-        <h3 class="small">Instant Preview Render</h3>
-        <div class="row">
-          <div class="col" style="max-width:110px"><label>W</label><input id="renderW" type="number" value="720"></div>
-          <div class="col" style="max-width:110px"><label>H</label><input id="renderH" type="number" value="404"></div>
-          <div class="col" style="max-width:110px"><label>FPS</label><input id="renderFps" type="number" value="30"></div>
-          <div class="col" style="max-width:200px;display:flex;align-items:end">
-            <button id="btnRender" style="width:auto;padding:10px 20px">Render Preview</button>
+        <div class="clip-grid">
+          <div class="clip-card">
+            <span class="card-label">Scene 01</span>
+            <div class="thumb thumb-one"></div>
+            <p>Intro framing</p>
+          </div>
+          <div class="clip-card">
+            <span class="card-label">Scene 02</span>
+            <div class="thumb thumb-two"></div>
+            <p>Motion reveal</p>
+          </div>
+          <div class="clip-card">
+            <span class="card-label">Scene 03</span>
+            <div class="thumb thumb-three"></div>
+            <p>Build energy</p>
+          </div>
+          <div class="clip-card">
+            <span class="card-label">Scene 04</span>
+            <div class="thumb thumb-four"></div>
+            <p>Final beat</p>
           </div>
         </div>
-        <div class="progress-bar" id="renderProgress" style="display:none"><div class="fill" id="renderFill"></div></div>
-        <div id="renderStatus" style="display:none;margin-top:8px;color:#9c9"></div>
-      </div>
+      </section>
 
-      <div class="stage">
-        <video id="preview" controls playsinline preload="auto" style="width:100%;max-height:420px;border-radius:14px;display:none;background:#000"></video>
-        <a id="downloadLink" href="#" download style="display:none;margin-top:8px"></a>
-      </div>
-    </section>
-  </main>
-</div>
+      <section id="render" class="panel reveal final-panel">
+        <div class="panel-header">
+          <span class="chapter-tag">Act IV</span>
+          <h2>Render the Reveal</h2>
+        </div>
 
-<script src="/app.js?v=5"></script>
-</body>
+        <div class="render-shell">
+          <div class="render-copy">
+            <p>
+              Keep the original storyline alive while swapping in fresh footage.
+              The reveal stays cinematic, coherent, and emotionally aligned.
+            </p>
+            <button class="primary-btn">Create the Final Cut</button>
+          </div>
+          <div class="render-visual">
+            <div class="window-window">
+              <span class="window-topbar"></span>
+              <div class="window-content"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="/app.js"></script>
+  </body>
 </html>
