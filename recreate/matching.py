@@ -95,6 +95,7 @@ def clip_feature(filepath: str, sample_fps: float = 2.0) -> dict:
                 "scan": None, "scan_fps": sample_fps,
                 "contrast": 0.1, "saturation": 0.5, "temperature": 0.0,
                 "edge_density": 0.1, "mean_rgb": [0.5, 0.5, 0.5]}
+
     n_sample = min(n, 12)
     idx = np.linspace(0, n - 1, n_sample, dtype=int)
     feats = np.stack([_frame_sig(frames[i]) for i in idx])
@@ -289,7 +290,7 @@ def score_matrix(template: dict, clips: list[dict],
             if src_t is not None and src_dur >= slot_dur:
                 B[i, j] = float(np.clip(src_t, 0.0, max(0.0, src_dur - slot_dur)))
 
-            aspect = 1.0 if abs(1.0 - 1.0) < 0.05 else 0.6
+            aspect = 1.0
             tags = cl.get("tags", [])
             tag_bonus = 1.0 if (sh_tags & set(tags)) else 0.82
 
@@ -313,9 +314,17 @@ def score_matrix(template: dict, clips: list[dict],
             if abs(neigh_style["motion"] - clip_style["motion"]) > 0.30:
                 style_penalty += 0.08
 
+            final_style = max(0.0, style_score - style_penalty)
+            if content_score < 0.25 and final_style < 0.50:
+                S[i, j] = -1.0
+                continue
+            if final_style < 0.66 and continuity_score < 0.60:
+                S[i, j] = -0.75
+                continue
+
             S[i, j] = (
                 w_content * content_score
-                + w_style * max(0.0, style_score - style_penalty)
+                + w_style * final_style
                 + 0.18 * continuity_score
                 + w_duration * fit
                 + w_other * aspect * tag_bonus

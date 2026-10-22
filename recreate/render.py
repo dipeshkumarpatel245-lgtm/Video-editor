@@ -30,13 +30,13 @@ def build_filtergraph(edit: dict, W: int, H: int, R: float) -> str:
     min_d = 2.0 / R
 
     def seg_filter(i: int, seg: dict) -> str:
-        src = shlex.quote(seg["file"])
         s0 = seg["src_start"]
         s1 = seg["src_end"]
         speed = max(0.1, seg.get("speed", 1.0))
         ftail = seg.get("_fit", {}).get("freeze_tail", 0.0) if "_fit" in seg else 0.0
         f = f"[{i}:v]trim=start={s0}:end={s1},setpts=PTS-STARTPTS,setpts=PTS/{speed:.6f}"
         f += f",scale={W}:{H}:force_original_aspect_ratio=increase,crop={W}:{H}:0:0,setpts=PTS-STARTPTS"
+
         zseq = (seg.get("transform") or {}).get("zoom_seq")
         if zseq and len(zseq) >= 2:
             dur = max(0.1, (seg["end"] - seg["start"]) / speed)
@@ -46,6 +46,7 @@ def build_filtergraph(edit: dict, W: int, H: int, R: float) -> str:
             step = (z1 - z0) / max(1, frames - 1)
             f += f",zoompan=z='min({z0:.5f}+{step:.6f}*on,{max(z0, z1)+0.2:.5f})':d=1:s={W}x{H}:fps={R}"
         f += f",fps={R}"
+
         col = seg.get("color") or {}
         mat = col.get("matrix")
         if isinstance(mat, (list, tuple)) and len(mat) >= 9:
@@ -66,19 +67,7 @@ def build_filtergraph(edit: dict, W: int, H: int, R: float) -> str:
             f += f",tpad=stop_mode=clone:stop_duration={ftail:.4f}"
         return f
 
-    def to_stream(i: int) -> str:
-        return f"[v{i}]"
-
     parts: list[str] = []
-    labels = []
-    chain = ""
-    for i, seg in enumerate(segs):
-        filt = seg_filter(i, seg)
-        outl = f"[v{i}]"
-        parts.append(f"{filt}{outl}")
-        labels.append(f"v{i}")
-        chain = outl
-
     cur = "v0"
     seg0 = segs[0]
     total = (seg0["end"] - seg0["start"]) + _freeze(seg0)
@@ -99,6 +88,12 @@ def build_filtergraph(edit: dict, W: int, H: int, R: float) -> str:
         parts.append(f"[{cur}][v{i}]xfade=transition={xf}:duration={d:.6f}:offset={offset:.6f}[vx{i}]")
         total = total - d + len_i
         cur = f"vx{i}"
+
+    for i, seg in enumerate(segs):
+        filt = seg_filter(i, seg)
+        outl = f"[v{i}]"
+        parts.append(f"{filt}{outl}")
+
     parts.append(f"[{cur}]format=yuv420p[vout]")
     return ";\n".join(parts) + ";\n"
 
