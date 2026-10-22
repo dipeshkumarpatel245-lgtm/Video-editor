@@ -164,21 +164,20 @@ async def template_viz(template_id: str):
 
 @router.post("/recreate")
 async def do_recreate(template_id: str = Form(...), mode: str = Form("replace"),
-                      clip_ids: str = Form("")):
+                     clip_ids: str = Form("")):
     """Build a recreated edit; clip_ids = comma-separated file ids."""
     if mode not in ("replace", "recut"):
         raise HTTPException(400, "mode must be 'replace' or 'recut'")
     if not builder.exists(template_id):
         raise HTTPException(404, "template not found")
     template = builder.fetch(template_id)
-    ids = [cid.strip() for cid in clip_ids.split(",") if cid.strip()]
+    ids = list(dict.fromkeys(cid.strip() for cid in clip_ids.split(",") if cid.strip()))
     if not ids:
         raise HTTPException(400, "need at least one clip")
     clips = []
     for cid in ids:
         src = _media_path(cid)
         clips.append(clip_feature(str(src)))
-    # audio bed: use the template's own source when available, else first clip
     source_audio = template.get("meta", {}).get("_source") or str(MEDIA_DIR / ids[0])
     build = build_replace_edit if mode == "replace" else build_recut_edit
     edit = build(template, clips, source_audio=source_audio)
@@ -197,7 +196,7 @@ async def get_edit(edit_id: str):
 
 @router.post("/export")
 async def do_export(edit_id: str = Form(...), fmt: str = Form("fcpxml"),
-                    title: str = Form("Recreated")):
+                  title: str = Form("Recreated")):
     """Export an edit to an editor format and return the file."""
     edit = json.loads(_edit_path(edit_id).read_text())
     if fmt in ("fcpxml", "premiere", "edl"):
@@ -225,7 +224,7 @@ async def do_export(edit_id: str = Form(...), fmt: str = Form("fcpxml"),
 
 @router.post("/render")
 async def do_render(edit_id: str = Form(...), width: int = Form(720), height: int = Form(404),
-                    fps: int = Form(30)):
+                  fps: int = Form(30)):
     """Render a preview MP4 of the edit (returns a streamable URL)."""
     edit = json.loads(_edit_path(edit_id).read_text())
     out = RENDER_DIR / f"{edit_id}_{max(2, width)}x{max(2, height)}@{max(1, fps)}fps.mp4"
@@ -251,3 +250,14 @@ def _edit_path(edit_id: str) -> Path:
     if not p.exists():
         raise HTTPException(404, "edit not found")
     return p
+
+
+__all__ = [
+    "router",
+    "upload",
+    "do_analyze",
+    "do_recreate",
+    "do_export",
+    "do_render",
+    "stream_render",
+]
