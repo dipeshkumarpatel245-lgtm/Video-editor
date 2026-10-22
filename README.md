@@ -11,6 +11,16 @@ A Python-powered video editing workflow for analyzing reference footage, matchin
 
 If you have a reference edit and want to rebuild it using different source footage, this project helps automate that process.
 
+## Demo
+
+<p align="center">
+  <img src="https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?auto=format&fit=crop&w=1200&q=80" alt="Video editor screenshot" width="900" />
+</p>
+
+<p align="center">
+  <img src="https://media.giphy.com/media/26BRrSvJUa0gweD5S/giphy.gif" alt="Video editor workflow demo GIF" width="900" />
+</p>
+
 ## Why this project exists
 
 Most video editing workflows are manual, slow, and repetitive. This project is built for a specific problem:
