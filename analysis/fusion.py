@@ -1,11 +1,11 @@
 """Fuse all analysis events into the canonical Template dict."""
 from __future__ import annotations
+
 import numpy as np
 
 
 def _best_transition(cuts: list[dict], dissolves: list[dict], flashes: list[dict], t_prev: float, t_next: float) -> dict:
     """Classify the transition between two shots by proximity to detected events."""
-    # default cut
     if t_prev is None or t_next is None:
         return {"type": "cut", "since": 0.0, "source": "assumed"}
     mid = (t_prev + t_next) / 2
@@ -16,7 +16,6 @@ def _best_transition(cuts: list[dict], dissolves: list[dict], flashes: list[dict
         if d["t_start"] <= mid <= d["t_end"]:
             return {"type": "dissolve", "duration": round(d["t_end"] - d["t_start"], 4),
                     "location": mid, "source": "dissolve", "confidence": d["confidence"]}
-    # precise cut location
     best_cut = min([c for c in cuts], key=lambda c: abs(c["t"] - mid), default=None)
     if best_cut is not None and abs(best_cut["t"] - t_prev) < (t_next - t_prev) * 0.5 + 0.2:
         return {"type": "cut", "location": best_cut["t"], "source": "cut"}
@@ -71,7 +70,7 @@ def _motion_for_shots(motion_per_frame: list[dict], motion_global: dict, shots: 
             "pan_mag": round(float(pan_mag), 4),
             "zoom": round(float(zoom_a), 4),
             "shake": round(float(shake), 4),
-            "segments": [{"t": m["t"], "dx": m["dx"], "dy": m["dy"], "zoom": m["zoom"]} for m in per[::max(1, len(per)//8)]],
+            "segments": [{"t": m["t"], "dx": m["dx"], "dy": m["dy"], "zoom": m["zoom"]} for m in per[::max(1, len(per) // 8)]],
         })
     return motion
 
@@ -105,7 +104,6 @@ def _structure(shots: list[dict]) -> list[dict]:
     if n >= 4:
         for i in range(half, n):
             labels[i] = "outro" if n - half <= 2 else "build"
-        # peak energy window -> drop/peak
         peak_i = int(np.argmax(energy))
         if half <= peak_i < n - 1:
             labels[peak_i] = "peak"
@@ -121,9 +119,25 @@ def _structure(shots: list[dict]) -> list[dict]:
     return acts
 
 
+def _style_from_shot(sh: dict) -> dict:
+    """Normalize style attributes to a comparable vector for matching."""
+    content = sh.get("content") or {}
+    color = sh.get("color") or {}
+    motion = sh.get("motion") or {}
+    return {
+        "brightness": float(content.get("brightness", color.get("luma", 0.5))),
+        "contrast": float(content.get("contrast", max(0.05, (color.get("variance") or [0.1])[0] if isinstance(color.get("variance"), list) else 0.1))),
+        "saturation": float(content.get("saturation", color.get("sat", 0.5))),
+        "temperature": float(content.get("temperature", color.get("temp", 0.0))),
+        "edge_density": float(content.get("edge_density", 0.2)),
+        "motion": float(content.get("motion", motion.get("shake", 0.0))),
+        "mean_rgb": list(color.get("mean_rgb") or content.get("mean_rgb") or [0.5, 0.5, 0.5]),
+    }
+
+
 def fuse(*, probe: dict, beats: dict, loudness: dict, shots: dict,
-         motion: dict, speed: dict, color: dict, text: list[dict] | None = None,
-         sound_events: list[dict] | None = None) -> dict:
+          motion: dict, speed: dict, color: dict, text: list[dict] | None = None,
+          sound_events: list[dict] | None = None) -> dict:
     """Assemble the canonical template."""
     beat_list = beats.get("beats", [])
     motion_per_frame = motion.get("per_frame", [])
@@ -143,7 +157,6 @@ def fuse(*, probe: dict, beats: dict, loudness: dict, shots: dict,
             "energy": 0.5,
             "onset_rate": float(len(sh["beats"]) / max(0.001, sh["duration"])) if sh["duration"] else 0,
         }
-    # annotate sound events: on_beat if within 60ms of a beat
     beat_times = [b["t"] for b in beat_list]
     import bisect
     for ev in events:
@@ -155,7 +168,6 @@ def fuse(*, probe: dict, beats: dict, loudness: dict, shots: dict,
             near = min(near, beat_times[i] - ev["t"])
         ev["on_beat"] = abs(near) < 0.06
 
-    # attach per-shot color looks
     col_by_idx = {c["idx"]: c for c in (color.get("shots") or [])}
     for sh in linked:
         col = col_by_idx.get(sh["idx"])
@@ -165,6 +177,8 @@ def fuse(*, probe: dict, beats: dict, loudness: dict, shots: dict,
                            "sat": col.get("sat"),
                            "temp": col.get("temp"),
                            "luma": col.get("luma")}
+        sh["style"] = _style_from_shot(sh)
+
     text_map = {}
     for t in text or []:
         text_map.setdefault(round(t["t"]), []).append(t)
@@ -172,7 +186,6 @@ def fuse(*, probe: dict, beats: dict, loudness: dict, shots: dict,
         t0, t1 = int(sh["start"]), int(sh["end"])
         sh["text"] = text_map.get(t0, []) + text_map.get(t1, [])
 
-    # keep meta.duration consistent with detected shots when shot detection produced a timeline
     if linked:
         dur = round(linked[-1]["end"], 4)
         if abs(dur - probe["duration"]) < 1.5:

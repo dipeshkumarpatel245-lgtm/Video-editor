@@ -1,54 +1,59 @@
-"""Analyze custom clips and match them to template slots."""
+"""Analyze custom clips and match them to template slots with style-aware matching."""
 from __future__ import annotations
+
 import os
+
 import numpy as np
 from scipy.optimize import linear_sum_assignment
 
-from config import ANALYSIS_WIDTH, ANALYSIS_FPS
-from ffutils import run
 from analysis.probe import probe
-from analysis.video.shots import _read_frames_raw
 from analysis.video.content import shot_feature
+from analysis.video.shots import _read_frames_raw
+from config import ANALYSIS_FPS, ANALYSIS_WIDTH
+from ffutils import run
 
 
-def clip_feature(filepath: str, sample_fps: float = 2.0) -> dict:
-    """Extract lightweight feature vector + duration + aspect for a custom clip.
-
-    Also returns `scan`: one 28-dim YUV-hist signature per sampled frame plus the
-    sample rate, so source windows inside the clip can be matched against template shots.
-    """
-    info = probe(filepath)
-    dur = max(0.1, info["duration"])
-    frames, real_fps, n = _read_frames_raw(filepath, fps=sample_fps)
-    if n == 0:
-        return {"file": filepath, "duration": dur, "width": info["width"],
-                "height": info["height"], "feature": None, "tags": ["empty"],
-                "brightness": 0.5, "motion": 0.0, "nb_frames": 0,
-                "scan": None, "scan_fps": sample_fps}
-    # evenly sampled frames give a stable aggregate feature
-    n_sample = min(n, 12)
-    idx = np.linspace(0, n - 1, n_sample, dtype=int)
-    feats = np.stack([_frame_sig(frames[i]) for i in idx])
-    feature = feats.mean(axis=0)
-    feature /= (np.linalg.norm(feature) + 1e-8)
-    f = frames[idx].astype(np.float64) / 255.0
-    d = np.abs(np.diff(f, axis=0)).mean() if n_sample > 1 else 0.0
-    tags = []
-    if np.mean(f) < 0.3:
-        tags.append("dark")
-    elif np.mean(f) > 0.7:
-        tags.append("bright")
-    if d > 0.02:
-        tags.append("motion")
-    scan = np.stack([_frame_sig(frames[i]) for i in range(n)]) if n else None
+def _style_profile(obj: dict | None) -> dict:
+    """Return normalized style state for template shots or clip metadata."""
+    if not obj:
+        return {
+            "brightness": 0.5,
+            "contrast": 0.1,
+            "saturation": 0.5,
+            "temperature": 0.0,
+            "edge_density": 0.1,
+            "motion": 0.0,
+            "mean_rgb": [0.5, 0.5, 0.5],
+        }
+    content = obj.get("content") or obj.get("style") or {}
+    color = obj.get("color") or {}
+    motion = obj.get("motion") or {}
+    rgb = color.get("mean_rgb") or content.get("mean_rgb") or [0.5, 0.5, 0.5]
     return {
-        "file": filepath, "duration": dur,
-        "width": info["width"], "height": info["height"],
-        "feature": feature.tolist(),
-        "tags": tags, "brightness": round(float(np.mean(f)), 4),
-        "motion": round(float(d), 4), "nb_frames": int(n),
-        "scan": scan, "scan_fps": sample_fps,
+        "brightness": float(np.clip(content.get("brightness", color.get("luma", 0.5)), 0.0, 1.0)),
+        "contrast": float(np.clip(content.get("contrast", 0.1), 0.0, 1.0)),
+        "saturation": float(np.clip(content.get("saturation", color.get("sat", 0.5)), 0.0, 1.5)),
+        "temperature": float(np.clip(content.get("temperature", color.get("temp", 0.0)), -1.0, 1.0)),
+        "edge_density": float(np.clip(content.get("edge_density", 0.1), 0.0, 1.0)),
+        "motion": float(np.clip(content.get("motion", motion.get("shake", motion.get("motion", 0.0))), 0.0, 1.0)),
+        "mean_rgb": [float(np.clip(x, 0.0, 1.0)) for x in rgb[:3]],
     }
+
+
+def _style_similarity(a: dict, b: dict) -> float:
+    """Similarity in [0, 1] for style resemblance between template and clip."""
+    brightness = 1.0 - min(1.0, abs(a["brightness"] - b["brightness"]))
+    contrast = 1.0 - min(1.0, abs(a["contrast"] - b["contrast"]))
+    saturation = 1.0 - min(1.0, abs(a["saturation"] - b["saturation"]))
+    temperature = 1.0 - min(1.0, abs(a["temperature"] - b["temperature"]))
+    edge = 1.0 - min(1.0, abs(a["edge_density"] - b["edge_density"]))
+    motion = 1.0 - min(1.0, abs(a["motion"] - b["motion"]))
+    rgb = 1.0 - min(1.0, np.linalg.norm(np.asarray(a["mean_rgb"]) - np.asarray(b["mean_rgb"])) / np.sqrt(3.0))
+    return float(np.clip(
+        0.22 * brightness + 0.12 * contrast + 0.14 * saturation + 0.12 * temperature
+        + 0.10 * edge + 0.10 * motion + 0.20 * rgb,
+        0.0, 1.0,
+    ))
 
 
 def _frame_sig(img: np.ndarray) -> np.ndarray:
@@ -95,11 +100,7 @@ _tpl_cache: dict[str, list | None] = {}
 
 
 def template_shot_sigs(template: dict) -> list | None:
-    """Per-shot mean signature from the template source frames (cached per file).
-
-    Signatures use each shot's core (outside cross-fade margins) so blended
-    transition regions do not pollute the target look.
-    """
+    """Per-shot mean signature from the template source frames (cached per file)."""
     src = template.get("meta", {}).get("_source")
     if not src or not os.path.exists(src):
         return None
@@ -135,11 +136,7 @@ def template_shot_sigs(template: dict) -> list | None:
 
 def _best_window(scan: np.ndarray, sfps: float, sig: np.ndarray, slot_dur: float,
                  m_in: float = 0.0, m_out: float = 0.0):
-    """Best matching source window in the clip scan for a template slot.
-
-    Scores only the window core (outside cross-fade margins). Returns
-    (best_similarity, src_start_seconds) or (None, None).
-    """
+    """Best matching source window in the clip scan for a template slot."""
     if scan is None or sig is None or len(scan) == 0:
         return None, None
     n = len(scan)
@@ -178,8 +175,13 @@ def _cos(a, b):
 
 
 def score_matrix(template: dict, clips: list[dict],
-                 w_content: float = 0.55, w_duration: float = 0.35, w_other: float = 0.10) -> tuple[np.ndarray, np.ndarray]:
-    """Return (S, B): S[shot, clip] match scores in [0,1] and B[shot, clip] best source offsets."""
+                 w_content: float = 0.38, w_style: float = 0.28,
+                 w_duration: float = 0.22, w_other: float = 0.12) -> tuple[np.ndarray, np.ndarray]:
+    """Return (S, B): S[shot, clip] match scores and B[shot, clip] best source offsets.
+
+    This uses a stronger visual-style similarity so different clips can still recreate the
+    same template mood, pacing, and look.
+    """
     shots = template["shots"]
     sigs = template_shot_sigs(template)
     dissolves = template.get("dissolves")
@@ -189,41 +191,45 @@ def score_matrix(template: dict, clips: list[dict],
         slot_dur = sh["end"] - sh["start"]
         sh_feat = sh.get("content", {}).get("feature")
         sh_tags = set(sh.get("content", {}).get("tags", []))
+        sh_style = _style_profile(sh)
         m_in, m_out = _shot_margins(sh, dissolves)
         for j, cl in enumerate(clips):
             src_dur = cl["duration"]
-            # duration: how well the clip can fill the slot
             usable = min(src_dur, slot_dur * 1.2)
-            fit = usable / max(slot_dur, 1e-6) if src_dur >= slot_dur * 0.85 else (
-                  0.5 * src_dur / max(slot_dur, 1e-6))  # undersized clip scores lower
+            fit = usable / max(slot_dur, 1e-6) if src_dur >= slot_dur * 0.85 else (0.5 * src_dur / max(slot_dur, 1e-6))
             fit = float(np.clip(fit, 0, 1))
-            # content: best matching source window (frame-by-frame look) when available
             sig = sigs[i] if sigs else None
             scan = cl.get("scan")
             sim, src_t = _best_window(scan, cl.get("scan_fps", 2.0), sig, slot_dur, m_in, m_out)
             if sim is None:
                 sim = _cos(sh_feat, cl.get("feature"))
                 src_t = None
-            c = float(sim)
+            content_score = float(np.clip(sim, 0.0, 1.0))
+            clip_style = _style_profile(cl)
+            style_score = _style_similarity(sh_style, clip_style)
             if src_t is not None and src_dur >= slot_dur:
                 B[i, j] = float(np.clip(src_t, 0.0, max(0.0, src_dur - slot_dur)))
-            # aspect bonus
             aspect_slot = 1.0
             aspect_clip = 1.0
             aspect = float(1.0 if abs(aspect_slot - aspect_clip) < 0.05 else 0.6)
             tags = cl.get("tags", [])
-            tag_bonus = 1.0 if (sh_tags & set(tags)) else 0.9
-            S[i, j] = w_content * c + w_duration * fit + w_other * aspect * tag_bonus
+            tag_bonus = 1.0 if (sh_tags & set(tags)) else 0.82
+            style_penalty = 0.0
+            if abs(sh_style["brightness"] - clip_style["brightness"]) > 0.35:
+                style_penalty += 0.08
+            if abs(sh_style["temperature"] - clip_style["temperature"]) > 0.35:
+                style_penalty += 0.08
+            if abs(sh_style["motion"] - clip_style["motion"]) > 0.35:
+                style_penalty += 0.06
+            S[i, j] = (w_content * content_score
+                       + w_style * max(0.0, style_score - style_penalty)
+                       + w_duration * fit
+                       + w_other * aspect * tag_bonus)
     return S, B
 
 
 def assign(template: dict, clips: list[dict], allow_reuse: bool = False) -> list[dict]:
-    """Content-aware assignments for every shot.
-
-    Returns list per shot: {clip_idx, score, src_start?}. With fewer clips than
-    shots the best clip is reused but a usage penalty rotates clips so the same
-    one does not dominate.
-    """
+    """Content-aware assignments for every shot, with stronger style preservation."""
     n_shots = len(template["shots"])
     n_clips = len(clips)
     S, B = score_matrix(template, clips)
@@ -242,12 +248,11 @@ def assign(template: dict, clips: list[dict], allow_reuse: bool = False) -> list
              "src_start": (None if B[i, out[i]] != B[i, out[i]] else float(B[i, out[i]])) if out[i] is not None else None}
             for i in range(n_shots)
         ]
-    # fewer clips than shots -> fill every slot, rotate with a usage penalty
     DIV = 0.15
     out = [None] * n_shots
     used = [0] * n_clips
     for _ in range(n_shots):
-        best = (-1e9, -1, -1)  # (score, shot, clip)
+        best = (-1e9, -1, -1)
         for i in range(n_shots):
             if out[i] is not None:
                 continue
@@ -269,11 +274,7 @@ def assign(template: dict, clips: list[dict], allow_reuse: bool = False) -> list
 
 
 def trim_plan(clip: dict, slot_dur: float, slot_start: float, src_start: float | None = None) -> dict:
-    """Choose in/out + speed to fill a slot from a clip.
-
-    `src_start` (seconds) comes from the frame-matching step: pick the best-match
-    window directly instead of trimming from the middle.
-    """
+    """Choose in/out + speed to fill a slot from a clip."""
     src_dur = clip["duration"]
     if src_start is not None and src_dur >= slot_dur:
         hi = max(0.0, src_dur - slot_dur)
@@ -286,9 +287,11 @@ def trim_plan(clip: dict, slot_dur: float, slot_start: float, src_start: float |
         end = start + slot_dur
         return {"strategy": "trim", "src_start": round(start, 4), "src_end": round(end, 4),
                 "speed": 1.0, "freeze_tail": 0.0}
-    # undersized: slow down up to 0.6x then freeze-tail
     speed = max(0.6, src_dur / slot_dur)
     play = src_dur / speed
     freeze = slot_dur - play
     return {"strategy": "slow_freeze", "src_start": 0.0, "src_end": src_dur,
             "speed": round(speed, 4), "freeze_tail": round(max(0, freeze), 4)}
+
+
+__all__ = ["clip_feature", "assign", "trim_plan", "score_matrix", "template_shot_sigs"]

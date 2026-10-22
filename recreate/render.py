@@ -1,8 +1,10 @@
 """Render an Edit to an MP4 via ffmpeg filter graphs (xfade, eq, zoompan, tpad)."""
 from __future__ import annotations
-import os, shlex
-import subprocess
-from config import RENDER_WIDTH, RENDER_FPS
+
+import os
+import shlex
+
+from config import RENDER_FPS, RENDER_WIDTH
 from edit import lint
 from ffutils import run
 
@@ -25,7 +27,7 @@ def build_filtergraph(edit: dict, W: int, H: int, R: float) -> str:
     if n == 0:
         raise ValueError("empty edit (no segments)")
 
-    min_d = 2.0 / R  # minimum xfade duration (2 frames) for cuts
+    min_d = 2.0 / R
 
     def seg_filter(i: int, seg: dict) -> str:
         src = shlex.quote(seg["file"])
@@ -34,9 +36,7 @@ def build_filtergraph(edit: dict, W: int, H: int, R: float) -> str:
         speed = max(0.1, seg.get("speed", 1.0))
         ftail = seg.get("_fit", {}).get("freeze_tail", 0.0) if "_fit" in seg else 0.0
         f = f"[{i}:v]trim=start={s0}:end={s1},setpts=PTS-STARTPTS,setpts=PTS/{speed:.6f}"
-        # aspect-cover to WxH
         f += f",scale={W}:{H}:force_original_aspect_ratio=increase,crop={W}:{H}:0:0,setpts=PTS-STARTPTS"
-        # camera zoom keyframes
         zseq = (seg.get("transform") or {}).get("zoom_seq")
         if zseq and len(zseq) >= 2:
             dur = max(0.1, (seg["end"] - seg["start"]) / speed)
@@ -54,13 +54,14 @@ def build_filtergraph(edit: dict, W: int, H: int, R: float) -> str:
                 f += f",colorchannelmixer=rr={rr:.4f}:gg={gg:.4f}:bb={bb:.4f}"
         sat = col.get("sat", 1.0)
         exp = col.get("exposure", 0)
-        if abs(sat - 1.0) > 1e-3 or exp != 0:
-            f += f",eq=saturation={sat:.3f}:brightness={exp:.3f}"
+        contrast = col.get("contrast", 1.0)
+        if abs(sat - 1.0) > 1e-3 or exp != 0 or abs(contrast - 1.0) > 1e-3:
+            f += f",eq=saturation={sat:.3f}:brightness={exp:.3f}:contrast={contrast:.3f}"
         temp = col.get("temp", 0)
         if abs(temp) > 1e-3:
             k = max(2500, min(10500, 6500 - float(temp) * 12000.0))
             f += f",colortemperature=temperature={k:.0f}"
-        f += f",setsar=1"
+        f += ",setsar=1"
         if ftail > 0:
             f += f",tpad=stop_mode=clone:stop_duration={ftail:.4f}"
         return f
@@ -68,7 +69,6 @@ def build_filtergraph(edit: dict, W: int, H: int, R: float) -> str:
     def to_stream(i: int) -> str:
         return f"[v{i}]"
 
-    # build filter script
     parts: list[str] = []
     labels = []
     chain = ""
@@ -79,7 +79,6 @@ def build_filtergraph(edit: dict, W: int, H: int, R: float) -> str:
         labels.append(f"v{i}")
         chain = outl
 
-    # xfade consecutive streams; each overlap shrinks the combined timeline by d
     cur = "v0"
     seg0 = segs[0]
     total = (seg0["end"] - seg0["start"]) + _freeze(seg0)
@@ -117,9 +116,8 @@ def render(edit: dict, out_path: str, width: int | None = None, height: int | No
         raise ValueError("invalid edit: " + "; ".join(problems))
     meta = edit["meta"]
     W = width or int(meta.get("width", RENDER_WIDTH))
-    H = height or (int(meta.get("height", 720)))
+    H = height or int(meta.get("height", 720))
     R = fps or float(meta.get("fps", RENDER_FPS))
-    # keep aspect sane
     H = max(2, int(H))
     W = max(2, int(W))
 
